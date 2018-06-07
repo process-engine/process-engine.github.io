@@ -181,6 +181,31 @@ word-break: break-all;
   padding-bottom: 30px;
 }
 
+@media only screen and (max-width: 766px) {
+  .story-image-container {
+    margin-top: 15px;
+  }
+
+  .story-image-container--design {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+.design-text-container {
+  margin-top: 75px;
+}
+
+@media only screen and (min-width: 991px) {
+.design-text-container {
+  margin-top: 104px;
+}
+
+@media only screen and (min-width: 1200px) {
+.design-text-container {
+  margin-top: 125px;
+}
+
 
 /* ---------- Desktop PC ----------*/
 @media only screen and (min-width: 1200px) {
