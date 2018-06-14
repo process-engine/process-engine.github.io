@@ -201,7 +201,7 @@ word-break: break-all;
 }
 
 .story-image-container--triskele {
-  min-width: 300px;
+  min-width: 355px;
 }
 
 @media only screen and (min-width: 766px) {
@@ -222,10 +222,17 @@ word-break: break-all;
   }
 }
 
+.section-headline {
+  text-align: center;
+}
 
 @media only screen and (min-width: 767px) {
   .text-container {
     margin-top: 75px;
+  }
+
+  .section-headline {
+    text-align: left;
   }
 }
 
@@ -240,7 +247,6 @@ word-break: break-all;
     margin-top: 70px;
   }
 }
-
 
 /* ---------- Desktop PC ----------*/
 @media only screen and (min-width: 1200px) {
