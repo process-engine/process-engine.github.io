@@ -11,6 +11,21 @@
   <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="default.css">
+
+  <script type="text/javascript">
+    const timerInterval = 2000;
+
+    var teaserFlipText = ['all plattforms', 'macOS', 'Windows', 'Linux', 'Browser'];
+
+    var timer = setInterval(function() {
+        
+           var nextTexIndex = Math.floor(Math.random()*teaserFlipText.length);
+           var nextText = teaserFlipText[nextTexIndex];
+           var currentText = document.getElementById('teaserFlipCurrentText');
+           currentText.innerHTML = nextText;
+    }, timerInterval);  
+  </script>
+
 </head>
 
 <body>
@@ -99,140 +114,182 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <h2 class="slogan">BPMN that executes
-          <u>everywhere</u>
-        </h2>
+        <h2 class="slogan">A Workfow-Engine that executes BPMN on</h2>
+        <h2 class="slogan"><u id="teaserFlipCurrentText">all plattforms</u></h2>
       </div>
     </div>
   </div>
   <hr style="width: 100%">
   <div class="links-wrapper-desktop">
-    <div style="padding-top: 30px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-2">
-          </div>
-          <div class="col-2">
-            <a target="_top" href="mailto:hello@process-engine.io" style="color: inherit; text-decoration: none;">
-              <i class="fa fa-envelope fa-3x link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-            <a target="_blank" href="https://join.slack.com/t/process-engine/shared_invite/enQtMjUzMjI3ODYxMDcyLTFhNDlkODUxOGZlMTFlNWMxNzZjZmYwZjk1ZDNkZDQzNGI3M2Q1OWVmZjk5NjhhOWJiOWQxMmNiODUwMzgxZGE"
-              style="color: inherit; text-decoration: none;">
-              <i class="fa fa-slack fa-3x link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-            <a target="_blank" href="https://github.com/process-engine" style="color: inherit; text-decoration: none;">
-              <i class="fa fa-github fa-3x link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-            <a target="_blank" href="https://twitter.com/process_engine" style="color: inherit; text-decoration: none;">
-              <i class="fa fa-twitter fa-3x link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-          </div>
+    <div class="container padding-tb-50">
+      <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col-2">
+          <a target="_top" href="mailto:hello@process-engine.io" style="color: inherit; text-decoration: none;">
+            <i class="fa fa-envelope fa-3x link-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-2">
+          <a target="_blank" href="https://github.com/process-engine" style="color: inherit; text-decoration: none;">
+            <i class="fa fa-github fa-3x link-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-2">
+          <a target="_blank" href="https://twitter.com/process_engine" style="color: inherit; text-decoration: none;">
+            <i class="fa fa-twitter fa-3x link-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-3">
         </div>
       </div>
     </div>
   </div>
   <div class="links-wrapper-tablet">
-    <div style="padding-top: 30px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-2">
-          </div>
-          <div class="col-2">
-            <a target="_top" href="mailto:hello@process-engine.io" style="color: inherit; text-decoration: none;">
-              <i class="fa fa-envelope fa-2x link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-            <a target="_blank" href="https://join.slack.com/t/process-engine/shared_invite/enQtMjUzMjI3ODYxMDcyLTFhNDlkODUxOGZlMTFlNWMxNzZjZmYwZjk1ZDNkZDQzNGI3M2Q1OWVmZjk5NjhhOWJiOWQxMmNiODUwMzgxZGE"
-              style="color: inherit; text-decoration: none;">
-              <i class="fa fa-slack fa-2x link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-            <a target="_blank" href="https://github.com/process-engine" style="color: inherit; text-decoration: none;">
-              <i class="fa fa-github fa-2x link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-            <a target="_blank" href="https://twitter.com/process_engine" style="color: inherit; text-decoration: none;">
-              <i class="fa fa-twitter fa-2x link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-          </div>
+    <div class="container padding-tb-50">
+      <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col-2">
+          <a target="_top" href="mailto:hello@process-engine.io" style="color: inherit; text-decoration: none;">
+            <i class="fa fa-envelope fa-2x link-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-2">
+          <a target="_blank" href="https://github.com/process-engine" style="color: inherit; text-decoration: none;">
+            <i class="fa fa-github fa-2x link-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-2">
+          <a target="_blank" href="https://twitter.com/process_engine" style="color: inherit; text-decoration: none;">
+            <i class="fa fa-twitter fa-2x link-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-3">
         </div>
       </div>
     </div>
   </div>
   <div class="links-wrapper-phone">
-    <div style="padding-top: 30px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-2">
-          </div>
-          <div class="col-2">
-            <a target="_top" href="mailto:hello@process-engine.io" style="color: inherit; text-decoration: none;">
-              <i class="fa fa-envelope fa-lg link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-            <a target="_blank" href="https://join.slack.com/t/process-engine/shared_invite/enQtMjUzMjI3ODYxMDcyLTFhNDlkODUxOGZlMTFlNWMxNzZjZmYwZjk1ZDNkZDQzNGI3M2Q1OWVmZjk5NjhhOWJiOWQxMmNiODUwMzgxZGE"
-              style="color: inherit; text-decoration: none;">
-              <i class="fa fa-slack fa-lg link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-            <a target="_blank" href="https://github.com/process-engine" style="color: inherit; text-decoration: none;">
-              <i class="fa fa-github fa-lg link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-            <a target="_blank" href="https://twitter.com/process_engine" style="color: inherit; text-decoration: none;">
-              <i class="fa fa-twitter fa-lg link-logo" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-2">
-          </div>
+    <div class="container padding-tb-50">
+      <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col-2">
+          <a target="_top" href="mailto:hello@process-engine.io" style="color: inherit; text-decoration: none;">
+            <i class="fa fa-envelope fa-lg link-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-2">
+          <a target="_blank" href="https://github.com/process-engine" style="color: inherit; text-decoration: none;">
+            <i class="fa fa-github fa-lg link-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-2">
+          <a target="_blank" href="https://twitter.com/process_engine" style="color: inherit; text-decoration: none;">
+            <i class="fa fa-twitter fa-lg link-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-3">
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container padding-tb-50">
-    <img class="triskele" src="images/triskele.svg">
+  <div class="tinted-container">
+    <div class="container padding-tb-50">
+      <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-10">
+          <h3 class="title-text">Facts to know</h3>
+            <p>Maßgeschneiderte Software reagiert schwerfällig auf Änderungen der zugrunde liegenden Anforderungen, 
+              da der Aufwand an Kommunikation zwischen den Fachbereichen und der IT-Abteilung mit unterschiedlicher
+              Sprache erfolgt. Durch die Verwendung von BPMN zur Modellierung von Geschäftsprozessen wird eine 
+              gemeinsame Basis für die Kommunikation geschaffen. Dadurch können gemeinsam die Anpassungen anhand
+              der vorhanden Prozessmodelle besprochen werden. Wird das Prozessmodell in BPMN beschrieben, kann
+              die Workflow-Engine diese direkt aufführen. Damit erhält man die Flexibilität, auf Änderungen zu 
+              reagieren und man gewinnt ein mächtiges Werkzeug für die Kommunikation zwischen Technikern und 
+              Fachabteilungen. </p>
+
+            <p>
+              Zusammengefasst bedeutet dies:
+              <ul>
+                <li>Transformationskosten senken, durch Verwendung von gleicher Sprache</li>
+                <li>Diagramme als ausführbare Software</li>
+                <li>BPMN ist Industriestandard</li>
+                <li>Dokumentation entspricht der Software</li>
+                <li>bessere und einfachere Kommunikation</li>
+              </ul>
+            </p>
+
+            <p>Dem Ziel <em>"Software nie wieder wegwerfen zu müssen"</em> kommt man damit ein ganzes Stück näher.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container padding-tb-50">
+      <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+          <h3 class="title-text">Zielgruppen der ProcessEngine</h3>
+          <p>
+            Um den Lebenszyklus bestens zu unterstützen, bedient die ProcessEngine folgende Zielgruppen:
+            
+            <ul style="list-style-type: None">
+              <li><em>Prozess-Ersteller</em>
+                <ul>
+                  <li>Entwerfen Prozesslandschaften</li>
+                  <li>Erstellen und Konfigurieren Prozessmodelle</li>
+                  <li>Beobachten die Aufführung der Prozesse</li>
+                </ul>
+              </li>
+              <li><em>Prozess-Beteiligte</em>
+                <ul>
+                  <li>Starten oder Beenden Prozesse</li>
+                  <li>Bearbeiten Benutzertasks</li>
+                  <li>Führen Servicetasks aus</li>
+                </ul>
+              </li>
+              <li><em>Laufzeitumgebung</em>
+                <ul>
+                  <li>Unterstützung für die Ausführung der ProcessEngine</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+          <p>
+            Mit der Zuordnung der Aufgaben zu den entsprechenden Zielgruppen ist die Unterstützung
+            der Aufgaben der jeweiligen Gruppe deutlich fokusierter. Dies findet sich in den <em>Bestandteilen
+            von process-engine.io</em> wieder.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="tinted-container">
     <div class="container padding-tb-50">
       <div class="row">
-        <div class="col-md-12">
-          <h3 class="title-text">Philosophy</h3>
-          <!-- Old English Text {{{ -->
-          <!-- <p>Custom software is often hard to adapt to requirement changes. Business processes not only give you the flexibility -->
-          <!--   to adapt. They favor communication between technical and functional departments creating a better understanding -->
-          <!--   on both sides.</p> -->
+        <div class="col-md-1">
 
-          <!-- <p>The processEngine treats business processes as both: the documentation and the blueprint for your software. Even -->
-          <!--   in complex scenarios this minimizes the code you have to implement and thereby enhances productivity and stability -->
-          <!--   of your solutions.</p> -->
-          <!-- }}} Old English Text -->
-          <p>Maßgeschneiderte Software reagiert schwerfällig auf Änderungen der zugrunde liegenden Anforderungen. Durch
-            die Verwendung von Geschäftsprozessen erhält man die Flexibilität, auf Änderungen zu reagieren und man
-            gewinnt ein mächtiges Werkzeug für die Kommunikation zwischen Technikern und Fachabteilungen. <br />
-
-            Ein wichtiger Nebeneffekt: Besseres Verständnis auf allen Seiten.</p>
-
-          <p>Für die ProcessEngine sind Prozesse zweierlei: Dokumentation und Blaupause der Software.
-            In komplexen Anwendungsfällen reduziert die Verwendung von Prozessen als Basis der Software die Menge an
-            Code, die zu entwickeln ist, und steigert Produktivität und Stabilität der Lösungen.</p>
+        </div>
+        <div class="col-md-10">
+          <h3 class="title-text">Bestandteile von process-engine.io</h3>
+          
+          <p>
+            <ol>
+              <li>Vorgehensmodell: Beschreibt das Vorgehen bei der Entwicklung und Optimierung der Prozessmodelle.</li>
+              <li>BPMN-Studio: Die Anwendung, die die Arbeit der <em>Prozess-Ersteller</em> optimal überstützt.</li>
+              <li>APIs: Integration und Verwendung der ProzessEngine in eigene IT-Landschaften fördern und mit diesem 
+                auf optimalem Weg interagieren, ist die Aufgabe der APIs</li>
+              <li>ProcessEngine: Die Engine zum Ausführen der BPMN-Prozessmodelle</li>
+            </ol>
+          </p>
         </div>
       </div>
     </div>
@@ -240,8 +297,27 @@
 
   <div class="container padding-tb-50">
     <div class="row">
+      <div class="col-md-6 text-container-outer">
+        <div class="text-container">
+          <h3 class="section-headline">Vorgehensmodell</h3>
+          <p>Ganzheitlich betrachtet kann der Vorteil einer prozessbasierten Entwicklung darauf reduziert werden, dass
+            ein Unternehmen nachhaltig transformiert wird; Es wird zur Gewohnheit, iterativ das Geschäft selbst zu messen,
+            zu bewerten und evtl. neu auszurichten. Alle Unternehmensbereiche sind damit Teil der Wertschöpfungskette.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 story-image-container story-image-container--triskele">
+        <img src="images/triskele_without_titles.svg">
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="tinted-container">
+  <div class="container padding-tb-50">
+    <div class="row">
       <div class="col-md-6">
-        <h3 class="section-headline">Think</h3>
+        <h3 class="section-headline">Denken</h3>
         <p>Eine Übersicht der Prozesslandschaft und des Zusammenspiels aller Prozesse ist essentiell, um geschäftskritische
           Schnittstellen zu identifizieren und steuernd eingreifen zu können. Wir denken, überlegen und legen den besten
           Domänenzuschnitt fest.</p>
@@ -251,29 +327,29 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="tinted-container">
-    <div class="container padding-tb-50">
-      <div class="row">
-        <div class="col-md-6 text-container-outer">
-          <div class="text-container">
-            <h3 class="section-headline">Design</h3>
-            <p>Prozessverantwortliche und Techniker gestalten gemeinsam in dieser Phase: ein Bild sagt mehr als tausend Worte.
-              Missverständnisse werden minimiert, denn es wird eine gemeinsame Sprache entwickelt; iterativ wird die geplante
-              Vision umgesetzt und Bausteine heben die Qualität und fördern Nachhaltigkeit.</p>
-          </div>
-        </div>
-        <div class="col-md-6 story-image-container story-image-container--design">
-          <img src="images/design.svg">
-        </div>
+<div class="container padding-tb-50">
+  <div class="row">
+    <div class="col-md-6 text-container-outer">
+      <div class="text-container">
+        <h3 class="section-headline">Malen</h3>
+        <p>Prozessverantwortliche und Techniker gestalten gemeinsam in dieser Phase: ein Bild sagt mehr als tausend Worte.
+          Missverständnisse werden minimiert, denn es wird eine gemeinsame Sprache entwickelt; iterativ wird die geplante
+          Vision umgesetzt und Bausteine heben die Qualität und fördern Nachhaltigkeit.</p>
       </div>
     </div>
+    <div class="col-md-6 story-image-container story-image-container--design">
+      <img src="images/design.svg">
+    </div>
   </div>
+</div>
 
+<div class="tinted-container">
   <div class="container padding-tb-50">
     <div class="row">
       <div class="col-md-6">
-        <h3 class="section-headline">Inspect</h3>
+        <h3 class="section-headline">Messen</h3>
         <p>Performance und Leistung der Prozesse zu analysieren ist essentiell, um ein optimales Design vornehmen zu können.
           Dashboards unterstützen bei der Identifikation von Engpässen. Die gewonnenen Metriken liefern eine wertvolle Grundlage
           für die optimale Ausnutzung der Wertschöpfungskette.</p>
@@ -283,140 +359,36 @@
       </div>
     </div>
   </div>
+</div>
+ 
+<div id="getting-started-section" class="container padding-tb-50">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="title-text">Getting Started</h3>
+      <p>
+        Um die Vorteile des Vorgehensmodells, des BPMN-Studio, der APIs und selbstverständlich der ProcessEngine
+        so einfach wie möglich zu gestalten. Haben wir uns im 
+        <a target="_blank" href="http://www.process-engine.io/documentation/">Handbuch</a> 
+        bemüht diesem Anspruch gerecht zu werden.
+      </p>
 
-  <div class="tinted-container">
-    <div class="container padding-tb-50">
-      <div class="row">
-        <div class="col-md-6 text-container-outer">
-          <div class="text-container">
-            <h3 class="section-headline">The Big Picture</h3>
-            <p>Ganzheitlich betrachtet kann der Vorteil einer prozessbasierten Entwicklung darauf reduziert werden, dass
-              ein Unternehmen nachhaltig transformiert wird; Es wird zur Gewohnheit, iterativ das Geschäft selbst zu messen,
-              zu bewerten und evtl. neu auszurichten. Alle Unternehmensbereiche sind damit Teil der Wertschöpfungskette.</p>
-          </div>
-        </div>
-        <div class="col-md-6 story-image-container story-image-container--triskele">
-          <img src="images/triskele2.svg">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container padding-tb-50">
-    <div class="row">
-      <div class="col-12">
-        <div class="svg-wrapper-desktop">
-          <svg width="100%" height="100%">
-            <g transform="matrix(2,0,0,2,0,0)">
-              <g style="display: block;" transform="translate(51 41)">
-                <circle cx="18" cy="18" r="18" class="start-circle">
-                </circle>
-              </g>
-              <g style="display: block;" transform="translate(137 1)">
-                <rect class="round-rect" x="0" y="0" width="280" height="116" rx="10" ry="10">
-                </rect>
-              </g>
-              <g onclick="javascript:document.location.href='#getting-started-section'" cursor="pointer" style="display: block;" transform="translate(260 100)">
-                <circle class="event-circle outer" cx="18" cy="18" r="18">
-                </circle>
-                <circle class="event-circle inner" cx="18" cy="18" r="15">
-                </circle>
-                <path class="triangle" d="M 18,7.2 l 9,16.2 l -18,0 Z"></path>
-                <text x="-15" y="45" font-size="10">Getting Started</text>
-              </g>
-              <g style="display: block;" transform="translate(469 41)">
-                <circle cx="18" cy="18" r="18" class="end-circle">
-                </circle>
-              </g>
-              <g style="display: block;">
-                <path class="arrow-line" d="m  87,59L137,59 " style="marker-end: url(&quot;#arrow-desktop&quot;);">
-                </path>
-              </g>
-              <g style="display: block;">
-                <path class="arrow-line" d="m  418,59L468,59 " style="marker-end: url(&quot;#arrow-desktop&quot;);">
-                </path>
-              </g>
-            </g>
-            <defs>
-              <marker id="arrow-desktop" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
-                <path class="arrow" d="M 1 5 L 11 10 L 1 15 Z">
-                </path>
-              </marker>
-            </defs>
-          </svg>
-        </div>
-        <div class="svg-wrapper-tablet">
-          <svg width="100%" height="100%">
-            <g transform="matrix(2,0,0,2,0,0)">
-              <g style="display: block;" transform="translate(1 41)">
-                <circle cx="18" cy="18" r="18" class="start-circle">
-                </circle>
-              </g>
-              <g style="display: block;" transform="translate(77 1)">
-                <rect class="round-rect" x="0" y="0" width="190" height="116" rx="10" ry="10">
-                </rect>
-              </g>
-              <g onclick="javascript:document.location.href='#getting-started-section'" style="display: block;" transform="translate(160 100)">
-                <circle class="event-circle outer" cx="18" cy="18" r="18">
-                </circle>
-                <circle class="event-circle inner" cx="18" cy="18" r="15">
-                </circle>
-                <path class="triangle" d="M 18,7.2 l 9,16.2 l -18,0 Z"></path>
-                <text x="-15" y="45" font-size="10">Getting Started</text>
-              </g>
-              <g style="display: block;" transform="translate(309 41)">
-                <circle cx="18" cy="18" r="18" class="end-circle">
-                </circle>
-              </g>
-              <g style="display: block;">
-                <path class="arrow-line" d="m  37,59L77,59 " style="marker-end: url(&quot;#arrow-tablet&quot;);">
-                </path>
-              </g>
-              <g style="display: block;">
-                <path class="arrow-line" d="m  268,59L308,59 " style="marker-end: url(&quot;#arrow-tablet&quot;);">
-                </path>
-              </g>
-            </g>
-            <defs>
-              <marker id="arrow-tablet" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
-                <path class="arrow" d="M 1 5 L 11 10 L 1 15 ">
-                </path>
-              </marker>
-            </defs>
-          </svg>
-        </div>
-        <div class="goals-div">
-          <h3 class="title-text">Goals of this Project</h3>
-          <ul>
-            <li>Überall ausführbare Geschäftsprozesse</li>
-            <li>Prozessflüsse im Business werden sichtbar</li>
-            <li>Verbesserung der Kommunikation bei Anforderungsänderungen</li>
-            <li>Eigene Tasks mit TypeScript schreiben</li>
+      <p>
+        <ul>
+            <li>TODO: Download des BPMN-Studios</li>
+            <li>TODO: Getting started: Link zum Getting started</li>
+            <li>TODO: Ideen hier muss der Link zu den Ideen rein, oder so</li>
           </ul>
-        </div>
-      </div>
+      </p>
+
+      <p>
+        Sollte dennoch etwas fehlen oder der Einstieg einfach nicht gelingen ... einfach
+        eine kurze <a href="mailto:hello@process-engine.io">E-Mail</a>.
+      </p>
     </div>
   </div>
+</div>
 
-  <div class="tinted-container">
-    <div id="getting-started-section" class="container padding-tb-50">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="title-text">Getting Started</h3>
-          <p>
-            Auf der Seite unserer Dokumentation findest Du das
-            <a target="_blank" href="http://www.process-engine.io/documentation/">ProcessEngine Handbuch</a>.
-          </p>
-          <p>
-            Wir freuen uns auf jeden, der unsere
-            <a target="_blank" href="https://www.process-engine.io/documentation/">Getting-Started Beispiele</a>
-            ausprobiert.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+<div class="tinted-container">
   <div class="container padding-tb-50">
     <div class="row">
       <div class="col-md-12">
@@ -430,62 +402,90 @@
           where needed.</p>
       </div>
       <div class="col-md-6">
-        <h4>Dynamic UI</h4>
+        <h4>TODO: Dynamic UI</h4>
         <p class="padding-tb-15">Use a dynamically generated UI to handle user tasks. Integrate your own UI into the
           ProcessEngine by using one of many client APIs.</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-        <h4>Identity and Access Management</h4>
-        <p class="padding-tb-15">The ProcessEngine provides a built-in rights management based on claims. Attach required claims to every property
-          or method by using simple conventions.</p>
+        <h4>TODO: Identity and Access Management</h4>
+        <p class="padding-tb-15">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita 
+          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing 
+          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
       </div>
       <div class="col-md-6">
-        <h4>Validation</h4>
+        <h4>TODO:</h4>
         <p class="padding-tb-15">Generate JSON Schemas from all of your TypeScript code to validate data and parameters at runtime.</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-        <h4>Modularity</h4>
-        <p class="padding-tb-15">Thanks to the extremely modular codebase and IoC architecture you can replace EVERY aspect of the application if
-          needed.
+        <h4>TODO: Modularity</h4>
+        <p class="padding-tb-15">
+            orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita 
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing 
+            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         </p>
       </div>
       <div class="col-md-6">
-        <h4>HTTP REST API</h4>
-        <p class="padding-tb-15">Expose any entities of your data layer in a feature-rich HTTP REST API. That way other software can utilize the data
-          layer abstraction and the claims-based rights management of the ProcessEngine.</p>
+        <h4>TODO REST API</h4>
+        <p class="padding-tb-15">
+            orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita 
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing 
+            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="tinted-container">
-    <div class="container padding-tb-50">
-      <div class="row padding-b-30">
-        <div class="col-md-12">
-          <h3 class="title-text">Open Source</h3>
-          <p>We believe in the benefits of open source software. Don’t take the risk and effort of fixing bugs and implementing
-            features all on your own. You can rely on a community that shares the work and passion to make the foundation of
-            the software as perfect and modern as possible.</p>
+<div class="container padding-tb-50">
+  <div class="row padding-b-30">
+    <div class="col-md-12">
+      <h3 class="title-text">Open Source</h3>
+      <p>We believe in the benefits of open source software. Don’t take the risk and effort of fixing bugs and implementing
+        features all on your own. You can rely on a community that shares the work and passion to make the foundation of
+        the software as perfect and modern as possible.</p>
 
-          <p>Contribute your own enhancements to get feedback and improvements from a highly professional community.</p>
-        </div>
-      </div>
+      <p>Contribute your own enhancements to get feedback and improvements from a highly professional community.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <a href="http://www.essential-projects.org" target="_blank">
+        <img class="essential-projects-logo" src="images/essential_projects_logo_impro.png" />
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <p class="essential-projects-text">
+        The process-engine is built on components of Essential Projects.
+      </p>
+      <p>
+        Essential Projects is a foundation for open source projects.
+      </p>
+    </div>
+  </div>
+</div>
+
+  <hr style="width: 100%;">
+  <div class="white-container">
+    <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <a href="http://www.essential-projects.org" target="_blank">
-            <img class="essential-projects-logo" src="images/essential_projects_logo_impro.png" />
+        <div class="col-sm-8">
+          <a href="https://5minds.de" target="_blank">
+            <img class="img-fluid footer-logo" src="images/5minds.svg" style="height: 36px; margin-top: 28px;">
           </a>
         </div>
-        <div class="col-lg-6">
-          <p class="essential-projects-text">
-            The process-engine is built on components of Essential Projects.
-          </p>
-          <p>
-            Essential Projects is a foundation for open source projects.
-          </p>
+        <div class="col-sm-4">
+          <a href="https://huf-sixsense.com/" target="_blank">
+            <img class="img-fluid footer-logo" src="images/huf.svg">
+          </a>
         </div>
       </div>
     </div>
@@ -493,7 +493,12 @@
 
   <hr style="width: 100%;">
   <div class="white-container">
-    <div class="container">
+    <div class="container  padding-tb-50">
+      <div class="row">
+        <div class="col-sm-12">
+            <h3 class="title-text">Former supporters</h3>
+        </div>
+      </div>
       <div class="row">
         <div class="col-sm-4">
           <a href="https://5minds.de" target="_blank">
@@ -513,6 +518,8 @@
       </div>
     </div>
   </div>
+
+
   <div class="footer-container">
     <div class="container">
       <div class="row">

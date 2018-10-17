@@ -25,17 +25,6 @@ img{
   border: 0;
 }
 
-.big-cog {
-  /* animation: spin 12s linear infinite; */
-  /* transform-origin: center; */
-}
-
-.small-cog {
-  /* animation: spin 12s linear infinite; */
-  /* animation-direction:reverse; */
-  /* transform-origin: center; */
-}
-
 .no-margin {
   margin-bottom: 0rem;
 }
@@ -98,7 +87,7 @@ img{
   stroke: black;
 }
 
-.arrow{
+.arrow {
   fill: black;
   stroke-width: 1px;
   stroke-linecap: round;
@@ -106,19 +95,19 @@ img{
   stroke: black;
 }
 
-.arrow-line{
+.arrow-line {
   fill: none;
   stroke-width: 2px;
   stroke: black;
 }
 
-.round-rect{
+.round-rect {
   stroke: black;
   stroke-width: 2px;
   fill: white;
 }
 
-.start-circle{
+.start-circle {
   stroke: black;
   stroke-width: 2px;
   fill: white;
@@ -269,7 +258,7 @@ word-break: break-all;
   }
 
   .header-image {
-    background: url(images/background.svg);
+    /* background: url(images/background.svg); */
     background-size: cover;
   }
 
