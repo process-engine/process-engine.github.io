@@ -259,6 +259,7 @@ word-break: break-all;
   }
 
   .header-image {
+    background-color: #fff;
     background-size: cover;
   }
 
@@ -305,6 +306,7 @@ word-break: break-all;
   }
 
   .header-image {
+    background-color: #fff;
     background-size: cover;
   }
 
