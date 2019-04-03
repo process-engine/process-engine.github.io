@@ -26,7 +26,7 @@ Der Nutzer muss die Datei `index.html` in einem Browser öffnen.
 
 ### Deployment
 
-Das Projekt wird per "GitHub Pages" deployt. Hierzu muss der gewünschte Inhalt in den `gh-pages`-Branch gemergt werden.
+Das Projekt wird per "GitHub Pages" deployt. Hierzu muss der gewünschte Inhalt in den `master`-Branch gemergt werden.
 
 
 ## Wen kann ich auf das Projekt ansprechen?
