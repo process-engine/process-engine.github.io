@@ -31,5 +31,5 @@ Das Projekt wird per "GitHub Pages" deployt. Hierzu muss der gewünschte Inhalt 
 
 ## Wen kann ich auf das Projekt ansprechen?
 
-* René Föring
+* René Föhring
 * Martin Möllenbeck
