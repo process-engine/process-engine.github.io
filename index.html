@@ -1,544 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="5Minds IT-Solutions" />
+    <title>Product example · Bootstrap</title>
 
-<head>
-  <title>process-engine.io</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="default.css">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-  <script type="text/javascript">
-    const timerInterval = 2000;
-
-    var teaserFlipText = ['all plattforms', 'macOS', 'Windows', 'Browser'];
-
-    var timer = setInterval(function() {
-
-           var nextTexIndex = Math.floor(Math.random()*teaserFlipText.length);
-           var nextText = teaserFlipText[nextTexIndex];
-           var currentText = document.getElementById('teaserFlipCurrentText');
-           currentText.innerHTML = nextText;
-    }, timerInterval);
-  </script>
-
-</head>
-
-<body>
-  <div class="container-fluid header-image padding-tb-50">
-    <div class="row padding-b-30">
-      <div class="col-md-12">
-        <div class="container">
-          <h1 class="no-margin">
-            <svg class="title-logo" id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.79 18.34">
-              <defs>
-                <style>
-                  .cls-1 {
-                    fill: #fff;
-                  }
-                  .cls-2 {
-                    fill: none;
-                    stroke: #308bb0;
-                    stroke-linejoin: round;
-                    stroke-width: 0.75px;
-                  }
-                  .cls-3 {
-                    fill: #36a9e1;
-                  }
-                  .cls-4 {
-                    fill: #8e949a;
-                  }
-                </style>
-              </defs>
-              <title>process_engine_white_background</title>
-              <rect class="cls-1" x="67.66" y="6.93" width="62.5" height="8.58" rx="3.03" ry="3.03" />
-              <path class="cls-1" d="M69.46,17.11s-6.36-.14-13.18,0c-13.65.27-14.84-1-15.27-3.08-.36-1.72-1.42-4.22-4.42-4.22a4.2,4.2,0,0,0-4.2,4.2c0,1.84-1.84,2.73-3.31,2.73H15c-1.56,0-3.69,1.65-3.69,3.2v2.12c.38,1.34.77,2.15,1.73,2.61,0,0,0,0,0,0a1.45,1.45,0,0,0,1.42,1.81H15a1.46,1.46,0,0,0,1.45-1.34s0,0,0,0L27.33,25a9.29,9.29,0,0,1,1.58,1.49,6,6,0,0,0,4.23,1.63l.68,0a7.62,7.62,0,0,0,3.81-1.73,15.86,15.86,0,0,1,1.77-1.11l30.07-.39a2.84,2.84,0,0,0,2.83-2.83V19.93A2.84,2.84,0,0,0,69.46,17.11Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-2" d="M37.27,11.38" transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M46.36,22.59v.51c0,.18-.08.26-.26.26H40.7a1.34,1.34,0,0,1-1.42-1.41V20.09a1.34,1.34,0,0,1,1.42-1.41H46.1c.18,0,.26.08.26.26v.51c0,.18-.08.26-.26.26h-5a.57.57,0,0,0-.62.62v1.37a.57.57,0,0,0,.62.62h5C46.28,22.33,46.36,22.41,46.36,22.59Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M53.35,18.68A1.15,1.15,0,0,1,54.64,20v.23a1.15,1.15,0,0,1-1.29,1.28h-5v.23a.57.57,0,0,0,.62.62h5.15a.23.23,0,0,1,.26.26v.51a.23.23,0,0,1-.26.26H48.62a1.34,1.34,0,0,1-1.42-1.41V20.09a1.34,1.34,0,0,1,1.42-1.41Zm-5,1.89h4.67c.3,0,.41-.14.41-.41v0c0-.27-.11-.41-.41-.41H49a.57.57,0,0,0-.62.62Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M55.65,23.36c-.18,0-.26-.08-.26-.26v-.51c0-.18.08-.26.26-.26H61c.3,0,.41-.13.41-.41v0c0-.26-.11-.41-.41-.41H56.53a1.14,1.14,0,0,1-1.28-1.28V20a1.15,1.15,0,0,1,1.28-1.28h5.58c.17,0,.25.08.25.26v.51c0,.18-.08.26-.25.26H56.83c-.3,0-.41.14-.41.41v0c0,.26.11.41.41.41h4.48a1.14,1.14,0,0,1,1.28,1.28v.23a1.15,1.15,0,0,1-1.28,1.28Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M63.62,23.36c-.18,0-.26-.08-.26-.26v-.51c0-.18.08-.26.26-.26H69c.3,0,.41-.13.41-.41v0c0-.26-.11-.41-.41-.41H64.5a1.14,1.14,0,0,1-1.28-1.28V20a1.15,1.15,0,0,1,1.28-1.28h5.58c.17,0,.25.08.25.26v.51c0,.18-.08.26-.25.26H64.8c-.3,0-.41.14-.41.41v0c0,.26.11.41.41.41h4.48a1.14,1.14,0,0,1,1.28,1.28v.23a1.15,1.15,0,0,1-1.28,1.28Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M74.17,20.81c0-.17.08-.26.25-.26h2.86c.17,0,.25.09.25.26v.57c0,.17-.08.26-.25.26H74.43c-.17,0-.25-.09-.25-.26Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M16.45,23.34a1.29,1.29,0,0,1-1.12-.5V25c0,.18-.08.26-.26.26h-.66c-.17,0-.25-.08-.25-.26V20.08a1.34,1.34,0,0,1,1.41-1.41h4.68a1.34,1.34,0,0,1,1.42,1.41v1.85a1.34,1.34,0,0,1-1.42,1.41Zm-1.12-1.66a.57.57,0,0,0,.62.62h3.92a.57.57,0,0,0,.62-.62V20.32a.57.57,0,0,0-.62-.62H15.95a.57.57,0,0,0-.62.62Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M24.13,18.66h3.22a.23.23,0,0,1,.26.26v.51a.23.23,0,0,1-.26.26H24.51a.57.57,0,0,0-.62.62v2.76c0,.18-.08.26-.26.26H23c-.17,0-.25-.08-.25-.26v-3A1.34,1.34,0,0,1,24.13,18.66Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M87.43,18.68A1.15,1.15,0,0,1,88.72,20v.23a1.15,1.15,0,0,1-1.29,1.28h-5v.23a.57.57,0,0,0,.62.62h5.15a.23.23,0,0,1,.26.26v.51a.23.23,0,0,1-.26.26H82.71a1.34,1.34,0,0,1-1.42-1.41V20.09a1.34,1.34,0,0,1,1.42-1.41Zm-5,1.89h4.67c.3,0,.41-.14.41-.41v0c0-.27-.11-.41-.41-.41H83.08a.57.57,0,0,0-.62.62Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M91,18.68H95.5a1.34,1.34,0,0,1,1.41,1.41v3c0,.18-.08.26-.26.26H96c-.17,0-.25-.08-.25-.26V20.34a.58.58,0,0,0-.62-.62H91.36a.57.57,0,0,0-.62.62V23.1c0,.18-.08.26-.26.26h-.66c-.17,0-.25-.08-.25-.26v-3A1.34,1.34,0,0,1,91,18.68Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M99.37,23.36A1.34,1.34,0,0,1,98,21.95V20.09a1.34,1.34,0,0,1,1.42-1.41h4.68a1.34,1.34,0,0,1,1.42,1.41v3.65a1.44,1.44,0,0,1-1.55,1.54h-5.4a.23.23,0,0,1-.26-.26v-.47a.23.23,0,0,1,.26-.26h5.1a.61.61,0,0,0,.67-.68v-.76a1.3,1.3,0,0,1-1.12.5Zm4.92-3a.57.57,0,0,0-.62-.62H99.75a.57.57,0,0,0-.62.62V21.7a.57.57,0,0,0,.62.62h3.92a.57.57,0,0,0,.62-.62Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M107.73,17.65a.23.23,0,0,1-.26.26h-.66c-.17,0-.25-.09-.25-.26V17c0-.18.08-.26.25-.26h.66c.18,0,.26.08.26.26Zm.39,4.67h.38c.18,0,.26.08.26.26v.51c0,.18-.08.26-.26.26h-.67a1.14,1.14,0,0,1-1.27-1.28V18.94c0-.18.08-.26.25-.26h.66c.18,0,.26.08.26.26v3C107.73,22.19,107.84,22.33,108.12,22.33Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M110.93,18.68h4.51a1.34,1.34,0,0,1,1.41,1.41v3c0,.18-.08.26-.26.26h-.66c-.17,0-.25-.08-.25-.26V20.34a.58.58,0,0,0-.62-.62h-3.75a.57.57,0,0,0-.62.62V23.1c0,.18-.08.26-.26.26h-.66c-.17,0-.25-.08-.25-.26v-3A1.34,1.34,0,0,1,110.93,18.68Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M124,18.68A1.15,1.15,0,0,1,125.33,20v.23A1.15,1.15,0,0,1,124,21.47h-5v.23a.57.57,0,0,0,.62.62h5.15a.23.23,0,0,1,.26.26v.51a.23.23,0,0,1-.26.26h-5.53a1.34,1.34,0,0,1-1.42-1.41V20.09a1.34,1.34,0,0,1,1.42-1.41Zm-5,1.89h4.67c.3,0,.41-.14.41-.41v0c0-.27-.11-.41-.41-.41H119.7a.57.57,0,0,0-.62.62Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M126.18,23.08v-.72a.25.25,0,0,1,.28-.29h.89a.25.25,0,0,1,.28.29v.72a.25.25,0,0,1-.28.28h-.89A.25.25,0,0,1,126.18,23.08Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M129.88,17.65a.23.23,0,0,1-.26.26H129c-.17,0-.25-.09-.25-.26V17c0-.18.08-.26.25-.26h.66c.18,0,.26.08.26.26Zm.39,4.67h.38c.18,0,.26.08.26.26v.51c0,.18-.08.26-.26.26H130a1.14,1.14,0,0,1-1.27-1.28V18.94c0-.18.08-.26.25-.26h.66c.18,0,.26.08.26.26v3C129.88,22.19,130,22.33,130.27,22.33Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-3" d="M131.61,21.95V20.09A1.34,1.34,0,0,1,133,18.68h4.68a1.34,1.34,0,0,1,1.42,1.41v1.85a1.34,1.34,0,0,1-1.42,1.41H133A1.34,1.34,0,0,1,131.61,21.95Zm1.18-1.61V21.7a.57.57,0,0,0,.62.62h3.92a.57.57,0,0,0,.62-.62V20.34a.57.57,0,0,0-.62-.62h-3.92A.57.57,0,0,0,132.79,20.34Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-4" d="M69.94,17.72H39.54a.23.23,0,0,1-.26-.26V17a.23.23,0,0,1,.26-.26h30.4a3.33,3.33,0,0,1,3.33,3.33V22a3.33,3.33,0,0,1-3.33,3.33H39.54a.23.23,0,0,1-.26-.26v-.47a.23.23,0,0,1,.26-.26h30.4A2.34,2.34,0,0,0,72.28,22V20.06A2.34,2.34,0,0,0,69.94,17.72Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-4" d="M81.78,17.7H105.2a.23.23,0,0,0,.26-.26V17a.23.23,0,0,0-.26-.26H81.78A3.33,3.33,0,0,0,78.45,20V22a3.33,3.33,0,0,0,3.33,3.33H96.64A.23.23,0,0,0,96.9,25v-.48a.23.23,0,0,0-.26-.26H81.77A2.32,2.32,0,0,1,79.44,22V20A2.34,2.34,0,0,1,81.78,17.7Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-4" d="M127.41,16.73H109.73c-.14,0-.22.08-.22.26v.47c0,.18.07.26.22.26h17.68c.14,0,.22-.08.22-.26V17C127.62,16.81,127.55,16.73,127.41,16.73Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-4" d="M138.72,16.73h-6.89c-.14,0-.22.08-.22.26v.47c0,.18.07.26.22.26h6.89a2.34,2.34,0,0,1,2.34,2.34V22a2.41,2.41,0,0,1-2.43,2.32H106.79c-.14,0-.22.08-.22.26V25c0,.18.07.26.22.26l31.93,0A3.33,3.33,0,0,0,142,22V20.06A3.33,3.33,0,0,0,138.72,16.73Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-4" d="M16.45,24.55V25c0,.18.07.26.21.26H27.35a.23.23,0,0,0,.26-.26v-.47a.23.23,0,0,0-.26-.26H16.67C16.53,24.28,16.45,24.37,16.45,24.55Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-4" d="M27.35,16.72H14.59a3.33,3.33,0,0,0-3.33,3.33V22a3.32,3.32,0,0,0,1.65,2.86h0a.23.23,0,0,0,.36-.07l.26-.39c.1-.15.09-.26,0-.36h0A2.33,2.33,0,0,1,12.25,22V20.05a2.34,2.34,0,0,1,2.34-2.34H27.35a.23.23,0,0,0,.26-.26V17A.23.23,0,0,0,27.35,16.72Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-4 big-cog" d="M36.94,22.82l1.39-.09a4.81,4.81,0,0,0,0-1.92L37,20.69a3.92,3.92,0,0,0-.33-.84l.92-1a5.26,5.26,0,0,0-1.34-1.37l-1.07.89a2.26,2.26,0,0,0-.83-.36l-.09-1.39a4.81,4.81,0,0,0-1.92,0l-.13,1.37a3.92,3.92,0,0,0-.84.33l-1-.92a5.26,5.26,0,0,0-1.37,1.34l.89,1.07a3.87,3.87,0,0,0-.22.4,3.87,3.87,0,0,0-.14.43l-1.39.09a4.81,4.81,0,0,0,0,1.92l1.37.13a3.92,3.92,0,0,0,.33.84l-.92,1A5.26,5.26,0,0,0,30.17,26l1.07-.89a2.27,2.27,0,0,0,.83.36l.09,1.39a4.81,4.81,0,0,0,1.92,0l.13-1.37a3.92,3.92,0,0,0,.84-.33l1,.92a5.26,5.26,0,0,0,1.37-1.34l-.89-1.07a3.87,3.87,0,0,0,.22-.4A3.86,3.86,0,0,0,36.94,22.82Zm-3.74.76a1.89,1.89,0,1,1,1.89-1.89A1.89,1.89,0,0,1,33.2,23.58Z"
-                transform="translate(-11.26 -9.8)" />
-              <path class="cls-4 small-cog" d="M38.71,15.71l.92.31a3.35,3.35,0,0,0,.52-1.23l-.85-.45a2.73,2.73,0,0,0,0-.63l.87-.43a3.67,3.67,0,0,0-.5-1.24l-.92.29a2.69,2.69,0,0,0-.2-.25,2.7,2.7,0,0,0-.24-.2l.31-.92a3.35,3.35,0,0,0-1.23-.52l-.45.85a2.73,2.73,0,0,0-.63,0l-.43-.87a3.67,3.67,0,0,0-1.24.5l.29.92a2.69,2.69,0,0,0-.25.2,2.69,2.69,0,0,0-.2.24L33.55,12A3.35,3.35,0,0,0,33,13.21l.85.45a2.73,2.73,0,0,0,0,.63l-.87.43a3.66,3.66,0,0,0,.5,1.24l.92-.29a2.69,2.69,0,0,0,.2.25,2.69,2.69,0,0,0,.24.2l-.31.92a3.35,3.35,0,0,0,1.23.52l.45-.85a2.73,2.73,0,0,0,.63,0l.43.87a3.67,3.67,0,0,0,1.24-.5l-.29-.92a2.69,2.69,0,0,0,.25-.2A2.69,2.69,0,0,0,38.71,15.71Zm-2.57-.46a1.31,1.31,0,1,1,1.71-.72A1.31,1.31,0,0,1,36.14,15.26Z"
-                transform="translate(-11.26 -9.8)" />
-            </svg>
-          </h1>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/product.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-md-row justify-content-between align-items-center">
+        <a class="py-2" href="index.html">
+          <img src="images/logo.svg" width="32" height="32" />
+        </a>
+        <div class="float-right">
+          <a class="p-2 d-md-inline-block" href="index.html#getting-started">Getting Started</a>
+          <a class="p-2 d-md-inline-block" href="mailto:hello@process-engine.io">Kontakt</a>
+          <span class="p-2 d-none d-md-inline-block"
+            ><a
+              href="https://github.com/process-engine/bpmn-studio/releases/latest"
+              target="_blank"
+              class="btn btn-sm btn-primary"
+              style="color: white"
+              >Download</a
+            ></span
+          >
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="slogan">A Workfow-Engine that executes BPMN on</h2>
-        <h2 class="slogan"><u id="teaserFlipCurrentText">all plattforms</u></h2>
-      </div>
-    </div>
-  </div>
-  <hr style="width: 100%">
-  <div class="links-wrapper-desktop">
-    <div class="container padding-tb-50">
-      <div class="row">
-        <div class="col-3">
-        </div>
-        <div class="col-2">
-          <a target="_top" href="mailto:hello@process-engine.io" style="color: inherit; text-decoration: none;">
-            <i class="fa fa-envelope fa-3x link-logo" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="col-2">
-          <a target="_blank" href="https://github.com/process-engine" style="color: inherit; text-decoration: none;">
-            <i class="fa fa-github fa-3x link-logo" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="col-2">
-          <a target="_blank" href="https://twitter.com/process_engine" style="color: inherit; text-decoration: none;">
-            <i class="fa fa-twitter fa-3x link-logo" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="col-3">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="links-wrapper-tablet">
-    <div class="container padding-tb-50">
-      <div class="row">
-        <div class="col-3">
-        </div>
-        <div class="col-2">
-          <a target="_top" href="mailto:hello@process-engine.io" style="color: inherit; text-decoration: none;">
-            <i class="fa fa-envelope fa-2x link-logo" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="col-2">
-          <a target="_blank" href="https://github.com/process-engine" style="color: inherit; text-decoration: none;">
-            <i class="fa fa-github fa-2x link-logo" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="col-2">
-          <a target="_blank" href="https://twitter.com/process_engine" style="color: inherit; text-decoration: none;">
-            <i class="fa fa-twitter fa-2x link-logo" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="col-3">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="links-wrapper-phone">
-    <div class="container padding-tb-50">
-      <div class="row">
-        <div class="col-3">
-        </div>
-        <div class="col-2">
-          <a target="_top" href="mailto:hello@process-engine.io" style="color: inherit; text-decoration: none;">
-            <i class="fa fa-envelope fa-lg link-logo" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="col-2">
-          <a target="_blank" href="https://github.com/process-engine" style="color: inherit; text-decoration: none;">
-            <i class="fa fa-github fa-lg link-logo" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="col-2">
-          <a target="_blank" href="https://twitter.com/process_engine" style="color: inherit; text-decoration: none;">
-            <i class="fa fa-twitter fa-lg link-logo" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="col-3">
-        </div>
-      </div>
-    </div>
-  </div>
+    </nav>
 
-  <div class="tinted-container">
-    <div class="container padding-tb-50">
-      <div class="row">
-          <div class="col-md-1">
+    <div class="position-relative overflow-hidden text-center bg-light bg-hero">
+      <div class="container p-3 p-md-5">
+        <h1 class="site-title font-weight-normal">ProcessEngine.io</h1>
+        <p class="lead font-weight-normal">
+          ProcessEngine und BPMN Studio bilden eine verteilte, quelloffene Laufzeit- und Entwicklungsumgebung für
+          BPMN-basierte Geschäftsprozesse.
+        </p>
+        <a
+          href="https://github.com/process-engine/bpmn-studio/releases/latest"
+          target="_blank"
+          class="btn btn-primary btn-lg"
+          >BPMN Studio <span id="js-download-os"></span> herunterladen</a
+        >
+        <script>
+          var osText = "";
+          if (window.navigator.platform.match(/win/i)) {
+            osText = "für Windows";
+          } else if (window.navigator.platform.match(/mac/i)) {
+            osText = "für macOS";
+          }
+          document.getElementById("js-download-os").innerHTML = osText;
+        </script>
+        <div>
+          <small
+            ><a
+              href="https://github.com/process-engine/bpmn-studio/releases/latest"
+              target="_blank"
+              style="color: white; text-decoration: underline; opacity: 0.75"
+              href="#"
+              >Downloads für weitere Platformen verfügbar</a
+            ></small
+          >
+        </div>
+      </div>
+      <div class="text-center">
+        <img src="images/product.png" class="product-img" />
+      </div>
+    </div>
+
+    <div class="position-relative overflow-hidden text-center bg-light py-5">
+      <a name="getting-started"></a>
+
+      <h1>Getting Started</h1>
+      <p class="text-muted">
+        Coming soon ...
+      </p>
+    </div>
+
+    <!--
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Case Study by Team Solutions</h2>
+          <p class="lead">And an even wittier subheading.</p>
+        </div>
+        <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Blog Post by Team Solutions</h2>
+          <p class="lead">And an even wittier subheading.</p>
+        </div>
+        <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Blog Post by Team Solutions</h2>
+          <p class="lead">And an even wittier subheading.</p>
+        </div>
+        <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Case Study by Team Solutions</h2>
+          <p class="lead">And an even wittier subheading.</p>
+        </div>
+        <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+    </div>
+-->
+    <footer>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img src="images/logo.svg" width="80" height="80" />
+            <small class="d-block mb-3 text-muted">&copy; 2017-2019</small>
           </div>
-          <div class="col-md-10">
-          <h3 class="title-text">Facts to know</h3>
-            <p>Maßgeschneiderte Software reagiert schwerfällig auf Änderungen der zugrunde liegenden Anforderungen,
-              da der Aufwand an Kommunikation zwischen den Fachbereichen und der IT-Abteilung mit unterschiedlicher
-              Sprache erfolgt. Durch die Verwendung von BPMN zur Modellierung von Geschäftsprozessen wird eine
-              gemeinsame Basis für die Kommunikation geschaffen. Dadurch können gemeinsam die Anpassungen anhand
-              der vorhanden Prozessmodelle besprochen werden. Wird das Prozessmodell in BPMN beschrieben, kann
-              die Workflow-Engine diese direkt aufführen. Damit erhält man die Flexibilität, auf Änderungen zu
-              reagieren und man gewinnt ein mächtiges Werkzeug für die Kommunikation zwischen Technikern und
-              Fachabteilungen. </p>
-
-            <p>
-              Zusammengefasst bedeutet dies:
-              <ul>
-                <li>Transformationskosten senken, durch Verwendung von gleicher Sprache</li>
-                <li>Diagramme als ausführbare Software</li>
-                <li>BPMN ist Industriestandard</li>
-                <li>Dokumentation entspricht der Software</li>
-                <li>bessere und einfachere Kommunikation</li>
-              </ul>
-            </p>
-
-            <p>Dem Ziel <em>"Software nie wieder wegwerfen zu müssen"</em> kommt man damit ein ganzes Stück näher.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="container padding-tb-50">
-      <div class="row">
-        <div class="col-md-1">
-
-        </div>
-        <div class="col-md-10">
-          <h3 class="title-text">Zielgruppen der ProcessEngine</h3>
-          <p>
-            Um den Lebenszyklus bestens zu unterstützen, bedient die ProcessEngine folgende Zielgruppen:
-
-            <ul style="list-style-type: None">
-              <li><em>Prozess-Ersteller</em>
-                <ul>
-                  <li>Entwerfen Prozesslandschaften</li>
-                  <li>Erstellen und Konfigurieren Prozessmodelle</li>
-                  <li>Beobachten die Aufführung der Prozesse</li>
-                </ul>
-              </li>
-              <li><em>Prozess-Beteiligte</em>
-                <ul>
-                  <li>Starten oder Beenden Prozesse</li>
-                  <li>Bearbeiten Benutzertasks</li>
-                  <li>Führen Servicetasks aus</li>
-                </ul>
-              </li>
-              <li><em>Laufzeitumgebung</em>
-                <ul>
-                  <li>Unterstützung für die Ausführung der ProcessEngine</li>
-                </ul>
+          <div class="col-12 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="index.html#getting-started">Getting started</a></li>
+              <li><a class="text-muted" href="https://github.com/process-engine">Open Source</a></li>
+              <li>
+                <a class="text-muted" href="https://github.com/process-engine/bpmn-studio/releases/latest">Downloads</a>
               </li>
             </ul>
-          </p>
-          <p>
-            Mit der Zuordnung der Aufgaben zu den entsprechenden Zielgruppen ist die Unterstützung
-            der Aufgaben der jeweiligen Gruppe deutlich fokusierter. Dies findet sich in den <em>Bestandteilen
-            von process-engine.io</em> wieder.
-          </p>
+          </div>
+          <div class="col-12 col-md">
+            <h5>Social</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="https://github.com/process-engine">GitHub</a></li>
+              <li><a class="text-muted" href="https://twitter.com/processengine">Twitter</a></li>
+              <li><a class="text-muted" href="mailto:hello@process-engine.io">E-Mail</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="data_privacy.html">Data Privacy</a></li>
+              <li><a class="text-muted" href="imprint.html">Imprint</a></li>
+            </ul>
+          </div>
+          <div class="col-12 text-center text-muted p-3">
+            Entwickelt von
+            <a href="https://5minds.de" target="_blank" class="text-muted" style="text-decoration: underline"
+              >5Minds IT-Solutions GmbH &amp; Co. KG</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="tinted-container">
-    <div class="container padding-tb-50">
-      <div class="row">
-        <div class="col-md-1">
-
-        </div>
-        <div class="col-md-10">
-          <h3 class="title-text">Bestandteile von process-engine.io</h3>
-
-          <p>
-            <ol>
-              <li>Vorgehensmodell: Beschreibt das Vorgehen bei der Entwicklung und Optimierung der Prozessmodelle.</li>
-              <li>BPMN-Studio: Die Anwendung, die die Arbeit der <em>Prozess-Ersteller</em> optimal überstützt.</li>
-              <li>APIs: Integration und Verwendung der ProzessEngine in eigene IT-Landschaften fördern und mit diesem
-                auf optimalem Weg interagieren, ist die Aufgabe der APIs</li>
-              <li>ProcessEngine: Die Engine zum Ausführen der BPMN-Prozessmodelle</li>
-            </ol>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container padding-tb-50">
-    <div class="row">
-      <div class="col-md-6 text-container-outer">
-        <div class="text-container">
-          <h3 class="section-headline">Vorgehensmodell</h3>
-          <p>Ganzheitlich betrachtet kann der Vorteil einer prozessbasierten Entwicklung darauf reduziert werden, dass
-            ein Unternehmen nachhaltig transformiert wird; Es wird zur Gewohnheit, iterativ das Geschäft selbst zu messen,
-            zu bewerten und evtl. neu auszurichten. Alle Unternehmensbereiche sind damit Teil der Wertschöpfungskette.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 story-image-container story-image-container--triskele">
-        <img src="images/triskele_without_titles.svg">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="tinted-container">
-  <div class="container padding-tb-50">
-    <div class="row">
-      <div class="col-md-6">
-        <h3 class="section-headline">Denken</h3>
-        <p>Eine Übersicht der Prozesslandschaft und des Zusammenspiels aller Prozesse ist essentiell, um geschäftskritische
-          Schnittstellen zu identifizieren und steuernd eingreifen zu können. Wir denken, überlegen und legen den besten
-          Domänenzuschnitt fest.</p>
-      </div>
-      <div class="col-md-6 story-image-container">
-        <img src="images/think.svg">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container padding-tb-50">
-  <div class="row">
-    <div class="col-md-6 text-container-outer">
-      <div class="text-container">
-        <h3 class="section-headline">Malen</h3>
-        <p>Prozessverantwortliche und Techniker gestalten gemeinsam in dieser Phase: ein Bild sagt mehr als tausend Worte.
-          Missverständnisse werden minimiert, denn es wird eine gemeinsame Sprache entwickelt; iterativ wird die geplante
-          Vision umgesetzt und Bausteine heben die Qualität und fördern Nachhaltigkeit.</p>
-      </div>
-    </div>
-    <div class="col-md-6 story-image-container story-image-container--design">
-      <img src="images/design.svg">
-    </div>
-  </div>
-</div>
-
-<div class="tinted-container">
-  <div class="container padding-tb-50">
-    <div class="row">
-      <div class="col-md-6">
-        <h3 class="section-headline">Messen</h3>
-        <p>Performance und Leistung der Prozesse zu analysieren ist essentiell, um ein optimales Design vornehmen zu können.
-          Dashboards unterstützen bei der Identifikation von Engpässen. Die gewonnenen Metriken liefern eine wertvolle Grundlage
-          für die optimale Ausnutzung der Wertschöpfungskette.</p>
-      </div>
-      <div class="col-md-6 story-image-container">
-        <img src="images/inspect.svg">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="getting-started-section" class="container padding-tb-50">
-  <div class="row">
-    <div class="col-md-12">
-      <h3 class="title-text">Getting Started</h3>
-      <p>
-        Um die Vorteile des Vorgehensmodells, des BPMN-Studio, der APIs und selbstverständlich der ProcessEngine
-        so einfach wie möglich zu gestalten. Haben wir uns im
-        <a target="_blank" href="http://www.process-engine.io/documentation/">Handbuch</a>
-        bemüht diesem Anspruch gerecht zu werden.
-      </p>
-
-      <p>
-        <ul>
-            <li>TODO: Download des BPMN-Studios</li>
-            <li>TODO: Getting started: Link zum Getting started</li>
-            <li>TODO: Ideen hier muss der Link zu den Ideen rein, oder so</li>
-          </ul>
-      </p>
-
-      <p>
-        Sollte dennoch etwas fehlen oder der Einstieg einfach nicht gelingen ... einfach
-        eine kurze <a href="mailto:hello@process-engine.io">E-Mail</a>.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="tinted-container">
-  <div class="container padding-tb-50">
-    <div class="row">
-      <div class="col-md-12">
-        <h3 class="title-text" style="padding-bottom: 50px;">Key Features</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <h4>Platform Independent</h4>
-        <p class="padding-tb-15">Run the software in your browser or in any Node.js environment - the same code where possible, the specific code
-          where needed.</p>
-      </div>
-      <div class="col-md-6">
-        <h4>TODO: Dynamic UI</h4>
-        <p class="padding-tb-15">Use a dynamically generated UI to handle user tasks. Integrate your own UI into the
-          ProcessEngine by using one of many client APIs.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <h4>TODO: Identity and Access Management</h4>
-        <p class="padding-tb-15">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="col-md-6">
-        <h4>TODO:</h4>
-        <p class="padding-tb-15">Generate JSON Schemas from all of your TypeScript code to validate data and parameters at runtime.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <h4>TODO: Modularity</h4>
-        <p class="padding-tb-15">
-            orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        </p>
-      </div>
-      <div class="col-md-6">
-        <h4>TODO REST API</h4>
-        <p class="padding-tb-15">
-            orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container padding-tb-50">
-  <div class="row padding-b-30">
-    <div class="col-md-12">
-      <h3 class="title-text">Open Source</h3>
-      <p>We believe in the benefits of open source software. Don’t take the risk and effort of fixing bugs and implementing
-        features all on your own. You can rely on a community that shares the work and passion to make the foundation of
-        the software as perfect and modern as possible.</p>
-
-      <p>Contribute your own enhancements to get feedback and improvements from a highly professional community.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6">
-      <a href="http://www.essential-projects.org" target="_blank">
-        <img class="essential-projects-logo" src="images/essential_projects_logo_impro.png" />
-      </a>
-    </div>
-    <div class="col-lg-6">
-      <p class="essential-projects-text">
-        The process-engine is built on components of Essential Projects.
-      </p>
-      <p>
-        Essential Projects is a foundation for open source projects.
-      </p>
-    </div>
-  </div>
-</div>
-
-  <hr style="width: 100%;">
-  <div class="white-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
-          <a href="https://5minds.de" target="_blank">
-            <img class="img-fluid footer-logo" src="images/5minds.svg" style="height: 36px; margin-top: 28px;">
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="https://huf-sixsense.com/" target="_blank">
-            <img class="img-fluid footer-logo" src="images/huf.svg">
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr style="width: 100%;">
-  <div class="white-container">
-    <div class="container  padding-tb-50">
-      <div class="row">
-        <div class="col-sm-12">
-            <h3 class="title-text">Former supporters</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <a href="https://5minds.de" target="_blank">
-            <img class="img-fluid footer-logo" src="images/5minds.svg" style="height: 36px; margin-top: 28px;">
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="https://huf-sixsense.com/" target="_blank">
-            <img class="img-fluid footer-logo" src="images/huf.svg">
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="http://de.quantusflow.com/" target="_blank">
-            <img class="img-fluid footer-logo" src="images/quantusflow.svg">
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="footer-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12" style="color: white;">
-          ·
-          <a href="impressum.html" target="_self" style="color: white;"> Impressum </a> ·
-          <a href="data_privacy.html" target="_self" style="color: white;"> Datenschutz </a> ·
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Optional JavaScript {{{ -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!-- TODO: We have to bundle this static, due to DSGVO -->
-  <script src="vendor/jquery/jquery-3.2.1.slim.min.js"></script>
-  <script src="vendor/popper/popper.min.js"></script>
-  <script src="vendor/bootstrap/bootstrap.min.js"></script>
-  <!-- }}} Optional JavaScript -->
-</body>
-
+      <div class="container"></div>
+    </footer>
+  </body>
 </html>
