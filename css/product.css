@@ -1,0 +1,75 @@
+.container {
+  max-width: 960px;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, 0.85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color 0.15s;
+}
+
+.site-title {
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .site-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}
+
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bg-hero {
+  background-image: linear-gradient(135deg, #9e9e9e 0%, #607d8b 100%);
+  margin: 0 !important;
+  color: #fff;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+}
+
+.product-img {
+  max-width: 56rem;
+  width: 100%;
+}
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+footer {
+  background: #323232;
+  color: #fafafa;
+}
