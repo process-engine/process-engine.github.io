@@ -19,7 +19,7 @@
   "scripts": {
     "build": "node metalsmith.js",
     "start": "metalsmith-start",
-    "deploy": "gh-pages --dist _site --branch master --silent"
+    "deploy": "gh-pages --dist _site --branch master"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",

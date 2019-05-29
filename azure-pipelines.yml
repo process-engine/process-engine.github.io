@@ -21,7 +21,7 @@ steps:
 - script: npm run build
   displayName: 'npm run build'
 
-- script: npm run deploy
+- script: npm run deploy -- --repo=https://${GH_TOKEN}@github.com/process-engine/process-engine.github.io.git
   displayName: 'npm run deploy'
   env:
-    GH_TOKEN: $(gh.token)
+    GH_TOKEN: $(GH_TOKEN)
