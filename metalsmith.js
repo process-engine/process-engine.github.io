@@ -155,10 +155,26 @@ var setDefaultFrontmatter = function() {
 // Let's build!
 //
 
+const releases = require("./releases");
+const latestStudioReleases = releases.loadLatestReleases();
+const latestStudioRelease = latestStudioReleases[0];
+
+const defaultDownloadUrl =
+  "https://github.com/process-engine/bpmn-studio/releases/latest";
+const defaultReleaseInfo = {
+  name: "",
+  assets: {
+    win: defaultDownloadUrl,
+    mac: defaultDownloadUrl,
+    default: defaultDownloadUrl
+  }
+};
+
 var app = Metalsmith(__dirname)
   .metadata({
     title: "ProcessEngine.io",
-    copyright_year: new Date().year
+    copyright_year: new Date().year,
+    latestStudioRelease: latestStudioRelease || defaultReleaseInfo
   })
   .source("./src")
   .destination(process.env.BUILD_DIR || "./_site")
@@ -212,6 +228,7 @@ if (module.parent) {
   app.build(function(err) {
     if (err) throw err;
 
+    console.log("metadata was", app.metadata());
     console.log("✓ written to", app.destination());
   });
 }

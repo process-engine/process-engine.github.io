@@ -17,12 +17,13 @@
     "metalsmith-watch": "^1.0.3"
   },
   "scripts": {
-    "build": "node metalsmith.js",
-    "start": "metalsmith-start",
+    "build": "node releases.js && node metalsmith.js",
+    "start": "node releases.js && metalsmith-start",
     "deploy": "gh-pages --dist _site --branch master"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
-    "http-server": "^0.10.0"
+    "http-server": "^0.10.0",
+    "node-fetch": "^2.6.0"
   }
 }

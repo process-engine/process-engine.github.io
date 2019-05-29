@@ -13,16 +13,21 @@ layout: landing-page.html
       href="https://github.com/process-engine/bpmn-studio/releases/latest"
       target="_blank"
       class="btn btn-primary btn-lg"
-      >BPMN Studio <span id="js-download-os"></span> herunterladen</a
+      id="js-download-link"
+      >BPMN Studio {{{ latestStudioRelease.name }}} <span id="js-download-os"></span> herunterladen</a
     >
     <script>
       var osText = "";
+      var downloadHref = "https://github.com/process-engine/bpmn-studio/releases/latest";
       if (window.navigator.platform.match(/win/i)) {
         osText = "für Windows";
+        downloadHref = "{{{ latestStudioRelease.assets.win }}}";
       } else if (window.navigator.platform.match(/mac/i)) {
         osText = "für macOS";
+        downloadHref = "{{{ latestStudioRelease.assets.mac }}}";
       }
       document.getElementById("js-download-os").innerHTML = osText;
+      document.getElementById("js-download-link").setAttribute("href", downloadHref);
     </script>
     <div>
       <small
