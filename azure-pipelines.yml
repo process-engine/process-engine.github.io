@@ -23,3 +23,5 @@ steps:
 
 - script: npm run deploy
   displayName: 'npm run deploy'
+  env:
+    GH_TOKEN: $(gh.token)
