@@ -12,7 +12,8 @@ Wir wollen mit dieser Landing Page unsere ProcessEngine präsentieren.
 
 ### Voraussetzungen
 
-keine
+- Node v10
+- npm
 
 ### Setup/Installation
 

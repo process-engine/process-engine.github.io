@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- develop
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -17,5 +17,9 @@ steps:
 
 - script: npm install
   displayName: 'npm install'
+
 - script: npm run build
   displayName: 'npm run build'
+
+- script: npm run deploy
+  displayName: 'npm run deploy'
