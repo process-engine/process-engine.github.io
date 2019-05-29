@@ -2,7 +2,7 @@
   "name": "static-site-example",
   "private": true,
   "dependencies": {
-    "handlebars": "^4.0.5",
+    "handlebars": "^4.1.2",
     "highlight.js": "^9.13.1",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.9.0",
@@ -14,7 +14,8 @@
     "metalsmith-serve": "0.0.1",
     "metalsmith-start": "^2.0.1",
     "metalsmith-templates": "^0.7.0",
-    "metalsmith-watch": "^1.0.3"
+    "metalsmith-watch": "^1.0.3",
+    "tar": ">=2.2.2"
   },
   "scripts": {
     "build": "node releases.js && node metalsmith.js",
