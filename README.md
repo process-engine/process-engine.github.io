@@ -16,17 +16,23 @@ keine
 
 ### Setup/Installation
 
-Es ist keine Installation notwendig, da das Projekt eine statische HTML-Seite ist.
+```
+npm install
+```
 
 ### Wie kann ich das Projekt benutzen?
 
 ### Benutzung
 
-Der Nutzer muss die Datei `index.html` in einem Browser öffnen.
+```
+npm start
+```
 
 ### Deployment
 
-Das Projekt wird per "GitHub Pages" deployt. Hierzu muss der gewünschte Inhalt in den `master`-Branch gemergt werden.
+```
+npm run deploy
+```
 
 
 ## Wen kann ich auf das Projekt ansprechen?
