@@ -5,11 +5,20 @@ function sh(command) {
 }
 
 function run() {
+  const repoName = "process-engine/getting-started";
+  const gitUrl = `git@github.com:${repoName}.git`;
+  const targetPath = "./src/docs/getting-started";
+
+  console.log("Removing getting-started contents");
+  sh("mkdir -p src/docs/getting-started");
   sh("mkdir -p tmp");
-  sh(
-    "git clone git@github.com:process-engine/getting-started.git tmp/getting-started"
-  );
-  sh("cp -r tmp/getting-started/docs ./src/docs/getting-started");
+
+  console.log(`Cloning getting-started contents from ${gitUrl}`);
+  sh(`git clone ${gitUrl} tmp/getting-started`);
+
+  console.log(`Replacing content in ${targetPath}`);
+  sh(`rm -rf ${targetPath}`);
+  sh(`cp -r tmp/getting-started/docs ${targetPath}`);
 }
 
 if (module.parent) {
