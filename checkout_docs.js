@@ -1,7 +1,7 @@
 const shell = require("shelljs");
 
 function sh(command) {
-  return shell.exec(command, { silent: true }).toString();
+  return shell.exec(command).toString();
 }
 
 function run() {
