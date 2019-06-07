@@ -151,31 +151,41 @@ var setDefaultFrontmatter = function() {
   };
 };
 
+function addGettingStartedDocs() {
+  require("./checkout_docs").run();
+}
+
+function getMetaData() {
+  const releases = require("./releases");
+  const latestStudioReleases = releases.loadLatestReleases();
+  const latestStudioRelease = latestStudioReleases[0];
+
+  const defaultDownloadUrl =
+    "https://github.com/process-engine/bpmn-studio/releases/latest";
+  const defaultReleaseInfo = {
+    name: "",
+    assets: {
+      win: defaultDownloadUrl,
+      mac: defaultDownloadUrl,
+      default: defaultDownloadUrl
+    }
+  };
+
+  return {
+    title: "ProcessEngine.io",
+    copyright_year: new Date().year,
+    latestStudioRelease: latestStudioRelease || defaultReleaseInfo
+  };
+}
+
 //
 // Let's build!
 //
 
-const releases = require("./releases");
-const latestStudioReleases = releases.loadLatestReleases();
-const latestStudioRelease = latestStudioReleases[0];
-
-const defaultDownloadUrl =
-  "https://github.com/process-engine/bpmn-studio/releases/latest";
-const defaultReleaseInfo = {
-  name: "",
-  assets: {
-    win: defaultDownloadUrl,
-    mac: defaultDownloadUrl,
-    default: defaultDownloadUrl
-  }
-};
+addGettingStartedDocs();
 
 var app = Metalsmith(__dirname)
-  .metadata({
-    title: "ProcessEngine.io",
-    copyright_year: new Date().year,
-    latestStudioRelease: latestStudioRelease || defaultReleaseInfo
-  })
+  .metadata(getMetaData())
   .source("./src")
   .destination(process.env.BUILD_DIR || "./_site")
   .clean(true)
