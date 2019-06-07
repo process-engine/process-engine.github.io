@@ -6,7 +6,7 @@ function sh(command) {
 
 function run() {
   const repoName = "process-engine/getting-started";
-  const gitUrl = `git@github.com:${repoName}.git`;
+  const gitUrl = `https://github.com/${repoName}.git`;
   const targetPath = "./src/docs/getting-started";
 
   console.log("Removing getting-started contents");
@@ -14,6 +14,7 @@ function run() {
   sh("mkdir -p tmp");
 
   console.log(`Cloning getting-started contents from ${gitUrl}`);
+  sh(`rm -rf tmp/getting-started`);
   sh(`git clone ${gitUrl} tmp/getting-started`);
 
   console.log(`Replacing content in ${targetPath}`);
