@@ -2,3 +2,6 @@
 node_modules
 _site
 tmp
+
+# this is automatically downloaded from the getting-started repo
+src/docs/getting-started
