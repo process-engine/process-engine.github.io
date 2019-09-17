@@ -1,0 +1,101 @@
+---
+layout: download-page.html
+---
+
+<script>
+  const latestStudioReleases = JSON.parse('{{{ json latestStudioReleases }}}');
+
+  const releaseListContainer = document.createElement('div');
+  releaseListContainer.classList.add('release-lists-container');
+
+  const macListContainer = document.createElement('div');
+  macListContainer.classList.add('release-list-container');
+
+  const macListHeader = document.createElement('span');
+  macListHeader.classList.add('release-list-header');
+  macListHeader.innerText = 'macOS';
+  macListContainer.appendChild(macListHeader);
+
+  const macList = document.createElement('ul');
+  macList.classList.add('release-list');
+  
+  const winListContainer = document.createElement('div');
+  winListContainer.classList.add('release-list-container');
+
+  winListHeader = document.createElement('span');
+  winListHeader.classList.add('release-list-header');
+  winListHeader.innerText = "Windows";
+  winListContainer.appendChild(winListHeader);
+
+
+  const winList = document.createElement('ul');
+  winList.classList.add('release-list');
+
+  const macReleases = [];
+  const winReleases = [];
+
+  for (const release of latestStudioReleases) {
+    if(release.releaseChannel === 'alpha') {
+      continue;
+    }
+    
+    for(const platformName in release.assets) {
+      const releaseListEntry = document.createElement('li');
+      releaseListEntry.classList.add('release-list-entry');
+
+      const version = release.name.replace('Release ', '');
+
+      const releaseListEntryDownloadLink = document.createElement('a');
+      releaseListEntryDownloadLink.classList = 'release-list-entry-download-link'
+      releaseListEntryDownloadLink.setAttribute('href', release.assets[platformName]);
+      releaseListEntryDownloadLink.innerHTML =`BPMN Studio ${version}`;
+
+      releaseListEntry.appendChild(releaseListEntryDownloadLink);
+
+      const createdRelease = {
+        releaseName: release.name,
+        releaseListEntry: releaseListEntry,
+      }
+
+      if(platformName === 'mac') {
+        macReleases.push(createdRelease);
+      } else if (platformName === 'win') {
+        winReleases.push(createdRelease);
+      }
+    }
+  }
+
+  const sortedMacReleases = macReleases.sort(releaseListSorter);
+  const sortedWinReleases = winReleases.sort(releaseListSorter);
+
+  for(const release of macReleases) {
+    macList.appendChild(release.releaseListEntry);
+  }
+  for(const release of winReleases) {
+    winList.appendChild(release.releaseListEntry);
+  }
+
+  macListContainer.appendChild(macList);
+  winListContainer.appendChild(winList);
+
+  releaseListContainer.appendChild(macListContainer);
+  releaseListContainer.appendChild(winListContainer);
+
+  document.body.appendChild(releaseListContainer);
+
+  function releaseListSorter (firstRelease, secondRelease) {
+    const firstReleaseIsStable = !firstRelease.releaseName.includes('beta');
+    const secondReleaseIsStable = !secondRelease.releaseName.includes('beta');
+    if(firstReleaseIsStable || secondReleaseIsStable) {
+      if(firstReleaseIsStable && !secondReleaseIsStable) {
+        return -1;
+      }
+
+      if(secondReleaseIsStable && !firstReleaseIsStable) {
+        return 1;
+      }
+    }
+
+    return firstRelease.releaseName > secondRelease.releaseName ? -1 : 1;
+  };
+</script>

@@ -87,6 +87,9 @@ Handlebars.registerHelper("formatPath", function(post) {
   return "/" + post.path.replace(/\/index\.md$/, "");
 });
 
+Handlebars.registerHelper("json", function(obj) {
+  return new Handlebars.SafeString(JSON.stringify(obj));
+});
 //
 // Our own plugins
 //
@@ -158,7 +161,9 @@ function addGettingStartedDocs() {
 function getMetaData() {
   const releases = require("./releases");
   const latestStudioReleases = releases.loadLatestReleases();
-  const latestStudioRelease = latestStudioReleases[0];
+  const latestStudioRelease = latestStudioReleases.find(release => {
+    return release.releaseChannel === "stable";
+  });
 
   const defaultDownloadUrl =
     "https://github.com/process-engine/bpmn-studio/releases/latest";
@@ -174,7 +179,8 @@ function getMetaData() {
   return {
     title: "ProcessEngine.io",
     copyright_year: new Date().year,
-    latestStudioRelease: latestStudioRelease || defaultReleaseInfo
+    latestStudioRelease: latestStudioRelease || defaultReleaseInfo,
+    latestStudioReleases: latestStudioReleases
   };
 }
 
