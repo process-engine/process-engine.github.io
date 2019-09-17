@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="5Minds IT-Solutions" />
+    <title>ProcessEngine.io</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    
+      .container img {
+        max-width: 100%;
+      }
+    
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/product.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1">
+      <div
+        class="container d-flex flex-md-row justify-content-between align-items-center"
+      >
+        <a class="py-2" href="/">
+          <img src="/assets/images/logo.svg" width="32" height="32" />
+        </a>
+        <div class="float-right">
+          <a class="p-2 d-md-inline-block" href="/docs/getting-started"
+            >Getting Started</a
+          >
+          <a class="p-2 d-md-inline-block" href="mailto:hello@process-engine.io"
+            >Kontakt</a
+          >
+          <span class="p-2 d-none d-md-inline-block"
+            ><a
+              href="https://github.com/process-engine/bpmn-studio/releases/latest"
+              target="_blank"
+              class="btn btn-sm btn-primary"
+              style="color: white"
+              >Download</a
+            ></span
+          >
+        </div>
+      </div>
+    </nav>
+
+    
+<script>
+  const latestStudioReleases = JSON.parse('[{"name":"Release v5.8.0-alpha.17","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.17/bpmn-studio-setup-5.8.0-alpha.17.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.17/bpmn-studio-setup-5.8.0-alpha.17.dmg"},"publishedAt":"2019-09-13T12:16:48Z"},{"name":"Release v5.8.0-alpha.16","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.16/bpmn-studio-setup-5.8.0-alpha.16.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.16/bpmn-studio-setup-5.8.0-alpha.16.dmg"},"publishedAt":"2019-09-12T14:26:23Z"},{"name":"Release v5.8.0-alpha.15","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.15/bpmn-studio-setup-5.8.0-alpha.15.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.15/bpmn-studio-setup-5.8.0-alpha.15.dmg"},"publishedAt":"2019-09-12T13:21:36Z"},{"name":"Release v5.8.0-alpha.14","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.14/bpmn-studio-setup-5.8.0-alpha.14.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.14/bpmn-studio-setup-5.8.0-alpha.14.dmg"},"publishedAt":"2019-09-12T09:47:47Z"},{"name":"Release v5.8.0-alpha.13","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.13/bpmn-studio-setup-5.8.0-alpha.13.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.13/bpmn-studio-setup-5.8.0-alpha.13.dmg"},"publishedAt":"2019-09-12T09:28:34Z"},{"name":"Release v5.8.0-alpha.12","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.12/bpmn-studio-setup-5.8.0-alpha.12.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.12/bpmn-studio-setup-5.8.0-alpha.12.dmg"},"publishedAt":"2019-09-12T08:52:09Z"},{"name":"Release v5.8.0-alpha.11","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.11/bpmn-studio-setup-5.8.0-alpha.11.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.11/bpmn-studio-setup-5.8.0-alpha.11.dmg"},"publishedAt":"2019-09-11T15:11:10Z"},{"name":"Release v5.8.0-alpha.10","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.10/bpmn-studio-setup-5.8.0-alpha.10.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.10/bpmn-studio-setup-5.8.0-alpha.10.dmg"},"publishedAt":"2019-09-11T09:32:14Z"},{"name":"Release v5.8.0-beta.1","releaseChannel":"beta","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-beta.1/bpmn-studio-setup-5.8.0-beta.1.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-beta.1/bpmn-studio-setup-5.8.0-beta.1.dmg"},"publishedAt":"2019-09-10T13:59:29Z"},{"name":"Release v5.8.0-alpha.9","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.9/bpmn-studio-setup-5.8.0-alpha.9.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.9/bpmn-studio-setup-5.8.0-alpha.9.dmg"},"publishedAt":"2019-09-10T12:55:03Z"},{"name":"Release v5.8.0-alpha.8","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.8/bpmn-studio-setup-5.8.0-alpha.8.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.8/bpmn-studio-setup-5.8.0-alpha.8.dmg"},"publishedAt":"2019-09-10T12:35:18Z"},{"name":"Release v5.8.0-alpha.7","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.7/bpmn-studio-setup-5.8.0-alpha.7.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.7/bpmn-studio-setup-5.8.0-alpha.7.dmg"},"publishedAt":"2019-09-10T11:39:10Z"},{"name":"Release v5.8.0-alpha.6","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.6/bpmn-studio-setup-5.8.0-alpha.6.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.6/bpmn-studio-setup-5.8.0-alpha.6.dmg"},"publishedAt":"2019-09-09T09:51:34Z"},{"name":"Release v5.8.0-alpha.5","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.5/bpmn-studio-setup-5.8.0-alpha.5.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.5/bpmn-studio-setup-5.8.0-alpha.5.dmg"},"publishedAt":"2019-09-09T09:01:53Z"},{"name":"Release v5.8.0-alpha.4","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.4/bpmn-studio-setup-5.8.0-alpha.4.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.4/bpmn-studio-setup-5.8.0-alpha.4.dmg"},"publishedAt":"2019-09-09T08:17:58Z"},{"name":"Release v5.8.0-alpha.3","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.3/bpmn-studio-setup-5.8.0-alpha.3.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.3/bpmn-studio-setup-5.8.0-alpha.3.dmg"},"publishedAt":"2019-09-06T09:08:10Z"},{"name":"Release v5.8.0-alpha.2","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.2/bpmn-studio-setup-5.8.0-alpha.2.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.2/bpmn-studio-setup-5.8.0-alpha.2.dmg"},"publishedAt":"2019-09-06T07:49:09Z"},{"name":"Release v5.8.0-alpha.1","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.1/bpmn-studio-setup-5.8.0-alpha.1.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.8.0-alpha.1/bpmn-studio-setup-5.8.0-alpha.1.dmg"},"publishedAt":"2019-09-05T13:17:35Z"},{"name":"Release v5.7.0-alpha.63","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.63/bpmn-studio-setup-5.7.0-alpha.63.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.63/bpmn-studio-setup-5.7.0-alpha.63.dmg"},"publishedAt":"2019-09-05T11:50:43Z"},{"name":"Release v5.7.0-alpha.62","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.62/bpmn-studio-setup-5.7.0-alpha.62.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.62/bpmn-studio-setup-5.7.0-alpha.62.dmg"},"publishedAt":"2019-09-05T11:15:38Z"},{"name":"Release v5.7.0-alpha.61","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.61/bpmn-studio-setup-5.7.0-alpha.61.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.61/bpmn-studio-setup-5.7.0-alpha.61.dmg"},"publishedAt":"2019-09-05T09:46:52Z"},{"name":"Release v5.7.0-alpha.60","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.60/bpmn-studio-setup-5.7.0-alpha.60.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.60/bpmn-studio-setup-5.7.0-alpha.60.dmg"},"publishedAt":"2019-09-05T09:09:48Z"},{"name":"Release v5.7.0-alpha.59","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.59/bpmn-studio-setup-5.7.0-alpha.59.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.59/bpmn-studio-setup-5.7.0-alpha.59.dmg"},"publishedAt":"2019-09-04T12:29:08Z"},{"name":"Release v5.7.0","releaseChannel":"stable","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0/bpmn-studio-setup-5.7.0.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0/bpmn-studio-setup-5.7.0.dmg"},"publishedAt":"2019-09-04T12:18:55Z"},{"name":"Release v5.7.0-alpha.58","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.58/bpmn-studio-setup-5.7.0-alpha.58.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.58/bpmn-studio-setup-5.7.0-alpha.58.dmg"},"publishedAt":"2019-09-04T09:55:46Z"},{"name":"Release v5.7.0-beta.5","releaseChannel":"beta","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.5/bpmn-studio-setup-5.7.0-beta.5.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.5/bpmn-studio-setup-5.7.0-beta.5.dmg"},"publishedAt":"2019-09-04T09:03:18Z"},{"name":"Release v5.7.0-alpha.57","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.57/bpmn-studio-setup-5.7.0-alpha.57.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.57/bpmn-studio-setup-5.7.0-alpha.57.dmg"},"publishedAt":"2019-09-03T15:18:41Z"},{"name":"Release v5.7.0-alpha.56","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.56/bpmn-studio-setup-5.7.0-alpha.56.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.56/bpmn-studio-setup-5.7.0-alpha.56.dmg"},"publishedAt":"2019-09-03T14:21:53Z"},{"name":"Release v5.7.0-alpha.55","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.55/bpmn-studio-setup-5.7.0-alpha.55.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.55/bpmn-studio-setup-5.7.0-alpha.55.dmg"},"publishedAt":"2019-09-03T11:38:52Z"},{"name":"Release v5.7.0-alpha.54","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.54/bpmn-studio-setup-5.7.0-alpha.54.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.54/bpmn-studio-setup-5.7.0-alpha.54.dmg"},"publishedAt":"2019-09-03T10:02:23Z"},{"name":"Release v5.7.0-alpha.53","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.53/bpmn-studio-setup-5.7.0-alpha.53.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.53/bpmn-studio-setup-5.7.0-alpha.53.dmg"},"publishedAt":"2019-09-02T15:56:40Z"},{"name":"Release v5.7.0-alpha.52","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.52/bpmn-studio-setup-5.7.0-alpha.52.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.52/bpmn-studio-setup-5.7.0-alpha.52.dmg"},"publishedAt":"2019-09-02T14:06:41Z"},{"name":"Release v5.7.0-alpha.51","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.51/bpmn-studio-setup-5.7.0-alpha.51.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.51/bpmn-studio-setup-5.7.0-alpha.51.dmg"},"publishedAt":"2019-09-02T08:53:16Z"},{"name":"Release v5.7.0-alpha.50","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.50/bpmn-studio-setup-5.7.0-alpha.50.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.50/bpmn-studio-setup-5.7.0-alpha.50.dmg"},"publishedAt":"2019-09-02T08:27:20Z"},{"name":"Release v5.7.0-alpha.49","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.49/bpmn-studio-setup-5.7.0-alpha.49.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.49/bpmn-studio-setup-5.7.0-alpha.49.dmg"},"publishedAt":"2019-08-29T15:09:57Z"},{"name":"Release v5.7.0-alpha.48","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.48/bpmn-studio-setup-5.7.0-alpha.48.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.48/bpmn-studio-setup-5.7.0-alpha.48.dmg"},"publishedAt":"2019-08-29T14:45:15Z"},{"name":"Release v5.7.0-alpha.47","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.47/bpmn-studio-setup-5.7.0-alpha.47.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.47/bpmn-studio-setup-5.7.0-alpha.47.dmg"},"publishedAt":"2019-08-29T14:27:23Z"},{"name":"Release v5.7.0-beta.4","releaseChannel":"beta","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.4/bpmn-studio-setup-5.7.0-beta.4.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.4/bpmn-studio-setup-5.7.0-beta.4.dmg"},"publishedAt":"2019-08-29T13:33:01Z"},{"name":"Release v5.7.0-alpha.46","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.46/bpmn-studio-setup-5.7.0-alpha.46.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.46/bpmn-studio-setup-5.7.0-alpha.46.dmg"},"publishedAt":"2019-08-29T13:13:15Z"},{"name":"Release v5.7.0-alpha.45","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.45/bpmn-studio-setup-5.7.0-alpha.45.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.45/bpmn-studio-setup-5.7.0-alpha.45.dmg"},"publishedAt":"2019-08-28T15:24:06Z"},{"name":"Release v5.7.0-alpha.44","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.44/bpmn-studio-setup-5.7.0-alpha.44.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.44/bpmn-studio-setup-5.7.0-alpha.44.dmg"},"publishedAt":"2019-08-28T10:12:26Z"},{"name":"Release v5.7.0-alpha.43","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.43/bpmn-studio-setup-5.7.0-alpha.43.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.43/bpmn-studio-setup-5.7.0-alpha.43.dmg"},"publishedAt":"2019-08-28T09:49:21Z"},{"name":"Release v5.7.0-alpha.42","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.42/bpmn-studio-setup-5.7.0-alpha.42.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.42/bpmn-studio-setup-5.7.0-alpha.42.dmg"},"publishedAt":"2019-08-28T09:31:58Z"},{"name":"Release v5.7.0-alpha.41","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.41/bpmn-studio-setup-5.7.0-alpha.41.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.41/bpmn-studio-setup-5.7.0-alpha.41.dmg"},"publishedAt":"2019-08-23T11:19:54Z"},{"name":"Release v5.7.0-alpha.40","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.40/bpmn-studio-setup-5.7.0-alpha.40.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.40/bpmn-studio-setup-5.7.0-alpha.40.dmg"},"publishedAt":"2019-08-23T11:00:33Z"},{"name":"Release v5.7.0-alpha.39","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.39/bpmn-studio-setup-5.7.0-alpha.39.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.39/bpmn-studio-setup-5.7.0-alpha.39.dmg"},"publishedAt":"2019-08-23T10:35:46Z"},{"name":"Release v5.7.0-beta.3","releaseChannel":"beta","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.3/bpmn-studio-setup-5.7.0-beta.3.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.3/bpmn-studio-setup-5.7.0-beta.3.dmg"},"publishedAt":"2019-08-21T15:09:47Z"},{"name":"Release v5.7.0-alpha.38","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.38/bpmn-studio-setup-5.7.0-alpha.38.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.38/bpmn-studio-setup-5.7.0-alpha.38.dmg"},"publishedAt":"2019-08-21T13:37:23Z"},{"name":"Release v5.7.0-alpha.37","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.37/bpmn-studio-setup-5.7.0-alpha.37.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.37/bpmn-studio-setup-5.7.0-alpha.37.dmg"},"publishedAt":"2019-08-21T12:57:00Z"},{"name":"Release v5.7.0-alpha.36","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.36/bpmn-studio-setup-5.7.0-alpha.36.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.36/bpmn-studio-setup-5.7.0-alpha.36.dmg"},"publishedAt":"2019-08-21T12:33:41Z"},{"name":"Release v5.7.0-alpha.35","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.35/bpmn-studio-setup-5.7.0-alpha.35.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.35/bpmn-studio-setup-5.7.0-alpha.35.dmg"},"publishedAt":"2019-08-21T08:51:26Z"},{"name":"Release v5.7.0-alpha.34","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.34/bpmn-studio-setup-5.7.0-alpha.34.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.34/bpmn-studio-setup-5.7.0-alpha.34.dmg"},"publishedAt":"2019-08-21T08:32:20Z"},{"name":"Release v5.7.0-alpha.33","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.33/bpmn-studio-setup-5.7.0-alpha.33.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.33/bpmn-studio-setup-5.7.0-alpha.33.dmg"},"publishedAt":"2019-08-21T06:59:10Z"},{"name":"Release v5.7.0-alpha.32","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.32/bpmn-studio-setup-5.7.0-alpha.32.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.32/bpmn-studio-setup-5.7.0-alpha.32.dmg"},"publishedAt":"2019-08-21T05:25:56Z"},{"name":"Release v5.7.0-alpha.31","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.31/bpmn-studio-setup-5.7.0-alpha.31.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.31/bpmn-studio-setup-5.7.0-alpha.31.dmg"},"publishedAt":"2019-08-20T13:26:29Z"},{"name":"Release v5.7.0-alpha.30","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.30/bpmn-studio-setup-5.7.0-alpha.30.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.30/bpmn-studio-setup-5.7.0-alpha.30.dmg"},"publishedAt":"2019-08-19T12:19:13Z"},{"name":"Release v5.7.0-alpha.29","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.29/bpmn-studio-setup-5.7.0-alpha.29.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.29/bpmn-studio-setup-5.7.0-alpha.29.dmg"},"publishedAt":"2019-08-19T11:16:09Z"},{"name":"Release v5.7.0-alpha.28","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.28/bpmn-studio-setup-5.7.0-alpha.28.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.28/bpmn-studio-setup-5.7.0-alpha.28.dmg"},"publishedAt":"2019-08-19T10:40:29Z"},{"name":"Release v5.7.0-beta.2","releaseChannel":"beta","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.2/bpmn-studio-setup-5.7.0-beta.2.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.2/bpmn-studio-setup-5.7.0-beta.2.dmg"},"publishedAt":"2019-08-14T08:30:53Z"},{"name":"Release v5.7.0-alpha.27","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.27/bpmn-studio-setup-5.7.0-alpha.27.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.27/bpmn-studio-setup-5.7.0-alpha.27.dmg"},"publishedAt":"2019-08-14T08:11:30Z"},{"name":"Release v5.7.0-alpha.26","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.26/bpmn-studio-setup-5.7.0-alpha.26.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.26/bpmn-studio-setup-5.7.0-alpha.26.dmg"},"publishedAt":"2019-08-13T10:57:47Z"},{"name":"Release v5.7.0-alpha.25","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.25/bpmn-studio-setup-5.7.0-alpha.25.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.25/bpmn-studio-setup-5.7.0-alpha.25.dmg"},"publishedAt":"2019-08-13T09:52:47Z"},{"name":"Release v5.7.0-alpha.24","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.24/bpmn-studio-setup-5.7.0-alpha.24.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.24/bpmn-studio-setup-5.7.0-alpha.24.dmg"},"publishedAt":"2019-08-13T09:29:48Z"},{"name":"Release v5.7.0-alpha.23","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.23/bpmn-studio-setup-5.7.0-alpha.23.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.23/bpmn-studio-setup-5.7.0-alpha.23.dmg"},"publishedAt":"2019-08-13T05:34:16Z"},{"name":"Release v5.7.0-beta.1","releaseChannel":"beta","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.1/bpmn-studio-setup-5.7.0-beta.1.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-beta.1/bpmn-studio-setup-5.7.0-beta.1.dmg"},"publishedAt":"2019-08-08T03:57:57Z"},{"name":"Release v5.7.0-alpha.22","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.22/bpmn-studio-setup-5.7.0-alpha.22.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.22/bpmn-studio-setup-5.7.0-alpha.22.dmg"},"publishedAt":"2019-08-07T15:29:08Z"},{"name":"Release v5.7.0-alpha.21","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.21/bpmn-studio-setup-5.7.0-alpha.21.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.21/bpmn-studio-setup-5.7.0-alpha.21.dmg"},"publishedAt":"2019-08-07T15:04:01Z"},{"name":"Release v5.7.0-alpha.20","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.20/bpmn-studio-setup-5.7.0-alpha.20.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.20/bpmn-studio-setup-5.7.0-alpha.20.dmg"},"publishedAt":"2019-08-07T10:16:32Z"},{"name":"Release v5.7.0-alpha.19","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.19/bpmn-studio-setup-5.7.0-alpha.19.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.19/bpmn-studio-setup-5.7.0-alpha.19.dmg"},"publishedAt":"2019-08-07T05:50:23Z"},{"name":"Release v5.7.0-alpha.18","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.18/bpmn-studio-setup-5.7.0-alpha.18.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.18/bpmn-studio-setup-5.7.0-alpha.18.dmg"},"publishedAt":"2019-08-06T16:44:24Z"},{"name":"Release v5.7.0-alpha.17","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.17/bpmn-studio-setup-5.7.0-alpha.17.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.17/bpmn-studio-setup-5.7.0-alpha.17.dmg"},"publishedAt":"2019-08-06T15:17:23Z"},{"name":"Release v5.7.0-alpha.16","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.16/bpmn-studio-setup-5.7.0-alpha.16.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.16/bpmn-studio-setup-5.7.0-alpha.16.dmg"},"publishedAt":"2019-08-06T14:45:27Z"},{"name":"Release v5.7.0-alpha.15","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.15/bpmn-studio-setup-5.7.0-alpha.15.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.15/bpmn-studio-setup-5.7.0-alpha.15.dmg"},"publishedAt":"2019-08-06T14:27:43Z"},{"name":"Release v5.7.0-alpha.14","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.14/bpmn-studio-setup-5.7.0-alpha.14.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.14/BPMN_Studio.Alpha.-5.7.0-alpha.14.dmg"},"publishedAt":"2019-08-06T10:40:42Z"},{"name":"Release v5.7.0-alpha.13","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.13/bpmn-studio-setup-5.7.0-alpha.13.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.13/BPMN_Studio.Alpha.-5.7.0-alpha.13.dmg"},"publishedAt":"2019-08-06T09:46:44Z"},{"name":"Release v5.7.0-alpha.12","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.12/bpmn-studio-setup-5.7.0-alpha.12.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.12/BPMN_Studio.Alpha.-5.7.0-alpha.12.dmg"},"publishedAt":"2019-08-06T08:58:29Z"},{"name":"Release v5.7.0-alpha.11","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.11/bpmn-studio-setup-5.7.0-alpha.11.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.11/BPMN_Studio.Alpha.-5.7.0-alpha.11.dmg"},"publishedAt":"2019-08-02T18:20:25Z"},{"name":"Release v5.7.0-alpha.10","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.10/bpmn-studio-setup-5.7.0-alpha.10.exe"},"publishedAt":"2019-08-02T17:01:16Z"},{"name":"Release v5.7.0-alpha.9","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.9/bpmn-studio-setup-5.7.0-alpha.9.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.9/bpmn-studio-5.7.0-alpha.9.dmg"},"publishedAt":"2019-08-02T08:18:58Z"},{"name":"Release v5.7.0-alpha.8","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.8/bpmn-studio-setup-5.7.0-alpha.8.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.8/bpmn-studio-5.7.0-alpha.8.dmg"},"publishedAt":"2019-08-01T12:36:41Z"},{"name":"Release v5.7.0-alpha.7","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.7/bpmn-studio-setup-5.7.0-alpha.7.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.7/bpmn-studio-5.7.0-alpha.7.dmg"},"publishedAt":"2019-07-31T12:52:16Z"},{"name":"Release v5.7.0-alpha.6","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.6/bpmn-studio-setup-5.7.0-alpha.6.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.6/bpmn-studio-5.7.0-alpha.6.dmg"},"publishedAt":"2019-07-31T12:31:53Z"},{"name":"Release v5.7.0-alpha.5","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.5/bpmn-studio-setup-5.7.0-alpha.5.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.5/bpmn-studio-5.7.0-alpha.5.dmg"},"publishedAt":"2019-07-31T11:19:01Z"},{"name":"Release v5.7.0-alpha.4","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.4/bpmn-studio-setup-5.7.0-alpha.4.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.4/bpmn-studio-5.7.0-alpha.4.dmg"},"publishedAt":"2019-07-31T08:52:14Z"},{"name":"Release v5.7.0-alpha.3","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.3/bpmn-studio-setup-5.7.0-alpha.3.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.3/bpmn-studio-5.7.0-alpha.3.dmg"},"publishedAt":"2019-07-31T07:56:36Z"},{"name":"Release v5.7.0-alpha.2","releaseChannel":"alpha","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.2/bpmn-studio-setup-5.7.0-alpha.2.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.7.0-alpha.2/bpmn-studio-5.7.0-alpha.2.dmg"},"publishedAt":"2019-07-26T13:57:27Z"},{"name":"5.6.2","releaseChannel":"stable","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.6.2/bpmn-studio-setup-5.6.2.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.6.2/bpmn-studio-5.6.2.dmg"},"publishedAt":"2019-07-16T07:26:44Z"},{"name":"5.6.1","releaseChannel":"stable","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.6.1/bpmn-studio-setup-5.6.1.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.6.1/bpmn-studio-5.6.1.dmg"},"publishedAt":"2019-07-15T17:12:18Z"},{"name":"5.6.0","releaseChannel":"stable","assets":{"win":"https://github.com/process-engine/bpmn-studio/releases/download/v5.6.0/bpmn-studio-setup-5.6.0.exe","mac":"https://github.com/process-engine/bpmn-studio/releases/download/v5.6.0/bpmn-studio-5.6.0.dmg"},"publishedAt":"2019-07-10T14:52:36Z"}]');
+
+  const releaseListContainer = document.createElement('div');
+  releaseListContainer.classList.add('release-lists-container');
+
+  const macListContainer = document.createElement('div');
+  macListContainer.classList.add('release-list-container');
+
+  const macListHeader = document.createElement('span');
+  macListHeader.classList.add('release-list-header');
+  macListHeader.innerText = 'macOS';
+  macListContainer.appendChild(macListHeader);
+
+  const macList = document.createElement('ul');
+  macList.classList.add('release-list');
+  
+  const winListContainer = document.createElement('div');
+  winListContainer.classList.add('release-list-container');
+
+  winListHeader = document.createElement('span');
+  winListHeader.classList.add('release-list-header');
+  winListHeader.innerText = "Windows";
+  winListContainer.appendChild(winListHeader);
+
+
+  const winList = document.createElement('ul');
+  winList.classList.add('release-list');
+
+  const macReleases = [];
+  const winReleases = [];
+
+  for (const release of latestStudioReleases) {
+    if(release.releaseChannel === 'alpha') {
+      continue;
+    }
+    
+    for(const platformName in release.assets) {
+      const releaseListEntry = document.createElement('li');
+      releaseListEntry.classList.add('release-list-entry');
+
+      const version = release.name.replace('Release ', '');
+
+      const releaseListEntryDownloadLink = document.createElement('a');
+      releaseListEntryDownloadLink.classList = 'release-list-entry-download-link'
+      releaseListEntryDownloadLink.setAttribute('href', release.assets[platformName]);
+      releaseListEntryDownloadLink.innerHTML =`BPMN Studio ${version}`;
+
+      releaseListEntry.appendChild(releaseListEntryDownloadLink);
+
+      const createdRelease = {
+        releaseName: release.name,
+        releaseListEntry: releaseListEntry,
+      }
+
+      if(platformName === 'mac') {
+        macReleases.push(createdRelease);
+      } else if (platformName === 'win') {
+        winReleases.push(createdRelease);
+      }
+    }
+  }
+
+  const sortedMacReleases = macReleases.sort(releaseListSorter);
+  const sortedWinReleases = winReleases.sort(releaseListSorter);
+
+  for(const release of macReleases) {
+    macList.appendChild(release.releaseListEntry);
+  }
+  for(const release of winReleases) {
+    winList.appendChild(release.releaseListEntry);
+  }
+
+  macListContainer.appendChild(macList);
+  winListContainer.appendChild(winList);
+
+  releaseListContainer.appendChild(macListContainer);
+  releaseListContainer.appendChild(winListContainer);
+
+  document.body.appendChild(releaseListContainer);
+
+  function releaseListSorter (firstRelease, secondRelease) {
+    const firstReleaseIsStable = !firstRelease.releaseName.includes('beta');
+    const secondReleaseIsStable = !secondRelease.releaseName.includes('beta');
+    if(firstReleaseIsStable || secondReleaseIsStable) {
+      if(firstReleaseIsStable && !secondReleaseIsStable) {
+        return -1;
+      }
+
+      if(secondReleaseIsStable && !firstReleaseIsStable) {
+        return 1;
+      }
+    }
+
+    return firstRelease.releaseName > secondRelease.releaseName ? -1 : 1;
+  };
+</script>
+
+
+    <footer>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img src="/assets/images/logo.svg" width="80" height="80" />
+            <small class="d-block mb-3 text-muted">&copy; 2017-2019</small>
+          </div>
+          <div class="col-12 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a class="text-muted" href="/docs/getting-started"
+                  >Getting started</a
+                >
+              </li>
+              <li>
+                <a class="text-muted" href="https://github.com/process-engine"
+                  >Open Source</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-muted"
+                  href="https://github.com/process-engine/bpmn-studio/releases/latest"
+                  >Downloads</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md">
+            <h5>Social</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a class="text-muted" href="https://github.com/process-engine"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a class="text-muted" href="https://twitter.com/process_engine"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a class="text-muted" href="mailto:hello@process-engine.io"
+                  >E-Mail</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a class="text-muted" href="/data_privacy">Data Privacy</a>
+              </li>
+              <li><a class="text-muted" href="/imprint">Imprint</a></li>
+            </ul>
+          </div>
+          <div class="col-12 text-center text-muted p-3">
+            Entwickelt von
+            <a
+              href="https://5minds.de"
+              target="_blank"
+              class="text-muted"
+              style="text-decoration: underline"
+              >5Minds IT-Solutions GmbH &amp; Co. KG</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container"></div>
+    </footer>
+  </body>
+  </html>
