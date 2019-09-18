@@ -1,13 +1,13 @@
-var process = require("process");
-var highlightjs = require("highlight.js");
+var process = require('process');
+var highlightjs = require('highlight.js');
 
-var Metalsmith = require("metalsmith");
-var markdown = require("metalsmith-markdown");
-var layouts = require("metalsmith-layouts");
-var inplace = require("metalsmith-in-place");
-var permalinks = require("metalsmith-permalinks");
-var collections = require("metalsmith-collections");
-var sass = require("metalsmith-sass");
+var Metalsmith = require('metalsmith');
+var markdown = require('metalsmith-markdown');
+var layouts = require('metalsmith-layouts');
+var inplace = require('metalsmith-in-place');
+var permalinks = require('metalsmith-permalinks');
+var collections = require('metalsmith-collections');
+var sass = require('metalsmith-sass');
 
 const SHOWN_STABLE_RELEASES = 5;
 const SHOWN_BETA_RELEASES = 5;
@@ -16,18 +16,18 @@ const SHOWN_BETA_RELEASES = 5;
 // Markdown
 //
 
-var marked = require("marked");
+var marked = require('marked');
 var renderer = new marked.Renderer();
 var oldImage = renderer.image;
 
 // replaces relative image urls with %%%<IMAGE_URL>%%%
 // for later processing
 renderer.image = function(href, title, text) {
-  var string = "<img";
+  var string = '<img';
 
   if (href) {
     if (href.match(/^[^\/]/)) {
-      href = "%%%" + href + "%%%";
+      href = '%%%' + href + '%%%';
     }
 
     string = string + ' src="' + href + '"';
@@ -39,7 +39,7 @@ renderer.image = function(href, title, text) {
     string = string + ' alt="' + text + '"';
   }
 
-  string = string + ">";
+  string = string + '>';
 
   return string;
 };
@@ -48,50 +48,44 @@ renderer.image = function(href, title, text) {
 // Template Helpers
 //
 
-var Handlebars = require("handlebars");
-var authors = require("./authors.json");
+var Handlebars = require('handlebars');
+var authors = require('./authors.json');
 
-Handlebars.registerHelper("formatAuthors", function(author_keys) {
+Handlebars.registerHelper('formatAuthors', function(author_keys) {
   var author_names = author_keys.map(function(current, index, array) {
     var author = authors[current];
-    return (
-      '<span class="nowrap">' +
-      author.full_name +
-      " (@" +
-      author.github +
-      ")</span>"
-    );
+    return '<span class="nowrap">' + author.full_name + ' (@' + author.github + ')</span>';
   });
-  return author_names.join(" und ");
+  return author_names.join(' und ');
 });
-Handlebars.registerHelper("formatDate", function(date) {
+Handlebars.registerHelper('formatDate', function(date) {
   var monthNames = [
-    "Januar",
-    "Februar",
-    "März",
-    "April",
-    "Mai",
-    "Juni",
-    "Juli",
-    "August",
-    "September",
-    "Oktober",
-    "November",
-    "Dezember"
+    'Januar',
+    'Februar',
+    'März',
+    'April',
+    'Mai',
+    'Juni',
+    'Juli',
+    'August',
+    'September',
+    'Oktober',
+    'November',
+    'Dezember',
   ];
 
   var day = date.getDate();
   var monthIndex = date.getMonth();
   var year = date.getFullYear();
 
-  return day + ". " + monthNames[monthIndex] + " " + year;
+  return day + '. ' + monthNames[monthIndex] + ' ' + year;
 });
-Handlebars.registerHelper("formatPath", function(post) {
-  return "/" + post.path.replace(/\/index\.md$/, "");
+Handlebars.registerHelper('formatPath', function(post) {
+  return '/' + post.path.replace(/\/index\.md$/, '');
 });
 
-Handlebars.registerHelper("each", function(context, options) {
-  var ret = "";
+Handlebars.registerHelper('each', function(context, options) {
+  var ret = '';
 
   for (var i = 0, j = context.length; i < j; i++) {
     ret = ret + options.fn(context[i]);
@@ -111,15 +105,15 @@ var rereplaceImageUrlsInPost = function() {
 
       if (filename.match(/\.(md|html)$/)) {
         var contents = data.contents.toString();
-        var regex_pattern = "(%%%)([^%]+)(%%%)";
-        var regex = new RegExp(regex_pattern, "g");
+        var regex_pattern = '(%%%)([^%]+)(%%%)';
+        var regex = new RegExp(regex_pattern, 'g');
         var regex_inner = new RegExp(regex_pattern);
-        var base_path = filename.replace("/index.html", "/");
+        var base_path = filename.replace('/index.html', '/');
 
         contents = contents.replace(regex, function(matched_string) {
           var result = matched_string.match(regex_inner);
           var original_image_path = result[2];
-          return "/" + base_path + original_image_path;
+          return '/' + base_path + original_image_path;
         });
 
         data.contents = Buffer.from(contents);
@@ -154,7 +148,7 @@ var setDefaultFrontmatter = function() {
     Object.keys(files).forEach(function(filename) {
       var data = files[filename];
 
-      data.layout = data.layout || "layout.html";
+      data.layout = data.layout || 'layout.html';
       data.is_blog_post = !!data.date;
 
       files[filename] = data;
@@ -165,41 +159,40 @@ var setDefaultFrontmatter = function() {
 };
 
 function addGettingStartedDocs() {
-  require("./checkout_docs").run();
+  require('./checkout_docs').run();
 }
 
 function getMetaData() {
-  const releases = require("./releases");
+  const releases = require('./releases');
   const latestStudioReleases = releases.loadLatestReleases();
   const latestStudioReleasesStable = latestStudioReleases
-    .filter(release => {
-      return release.releaseChannel === "stable";
+    .filter((release) => {
+      return release.releaseChannel === 'stable';
     })
     .slice(0, SHOWN_STABLE_RELEASES);
   const latestStudioReleasesBeta = latestStudioReleases
-    .filter(release => {
-      return release.releaseChannel === "beta";
+    .filter((release) => {
+      return release.releaseChannel === 'beta';
     })
     .slice(0, SHOWN_BETA_RELEASES);
   const latestStudioRelease = latestStudioReleasesStable[0];
 
-  const defaultDownloadUrl =
-    "https://github.com/process-engine/bpmn-studio/releases/latest";
+  const defaultDownloadUrl = 'https://github.com/process-engine/bpmn-studio/releases/latest';
   const defaultReleaseInfo = {
-    name: "",
+    name: '',
     assets: {
       win: defaultDownloadUrl,
       mac: defaultDownloadUrl,
-      default: defaultDownloadUrl
-    }
+      default: defaultDownloadUrl,
+    },
   };
 
   return {
-    title: "ProcessEngine.io",
+    title: 'ProcessEngine.io',
     copyright_year: new Date().year,
     latestStudioRelease: latestStudioRelease || defaultReleaseInfo,
     latestStudioReleasesStable: latestStudioReleasesStable,
-    latestStudioReleasesBeta: latestStudioReleasesBeta
+    latestStudioReleasesBeta: latestStudioReleasesBeta,
   };
 }
 
@@ -211,49 +204,49 @@ addGettingStartedDocs();
 
 var app = Metalsmith(__dirname)
   .metadata(getMetaData())
-  .source("./src")
-  .destination(process.env.BUILD_DIR || "./_site")
+  .source('./src')
+  .destination(process.env.BUILD_DIR || './_site')
   .clean(true)
   .use(parseDatesFromPostPath())
   .use(setDefaultFrontmatter())
   .use(
     collections({
       blog: {
-        pattern: "blog/**/*.md",
-        reverse: true
+        pattern: 'blog/**/*.md',
+        reverse: true,
       },
       docs: {
-        pattern: "docs/**/*.md",
-        reverse: true
-      }
-    })
+        pattern: 'docs/**/*.md',
+        reverse: true,
+      },
+    }),
   )
   .use(permalinks())
   .use(
     markdown({
       renderer: renderer,
       highlight: (code, lang) => {
-        if (lang === undefined) {
+        if (lang == null) {
           return code;
         }
 
         return highlightjs.highlight(lang, code).value;
-      }
-    })
+      },
+    }),
   )
   .use(rereplaceImageUrlsInPost())
   .use(
     inplace({
-      engine: "handlebars",
-      pattern: "**/*.{md,html}"
-    })
+      engine: 'handlebars',
+      pattern: '**/*.{md,html}',
+    }),
   )
   .use(
     layouts({
-      engine: "handlebars",
-      partials: "layouts",
-      pattern: "**/*.{md,html}"
-    })
+      engine: 'handlebars',
+      partials: 'layouts',
+      pattern: '**/*.{md,html}',
+    }),
   )
   .use(sass());
 
@@ -263,7 +256,7 @@ if (module.parent) {
   app.build(function(err) {
     if (err) throw err;
 
-    console.log("metadata was", app.metadata());
-    console.log("✓ written to", app.destination());
+    console.log('metadata was', app.metadata());
+    console.log('✓ written to', app.destination());
   });
 }
