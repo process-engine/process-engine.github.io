@@ -14,29 +14,28 @@ layout: landing-page.html
       target="_blank"
       class="btn btn-primary btn-lg"
       id="js-download-link"
-      >BPMN Studio {{{ latestStudioRelease.name }}} <span id="js-download-os"></span> herunterladen</a
     >
+      BPMN Studio {{{ latestStudioRelease.name }}} <span id="js-download-os"></span> herunterladen
+    </a>
     <script>
-      var osText = "";
-      var downloadHref = "https://github.com/process-engine/bpmn-studio/releases/latest";
+      var osText = '';
+      var downloadHref = 'https://github.com/process-engine/bpmn-studio/releases/latest';
       if (window.navigator.platform.match(/win/i)) {
-        osText = "für Windows";
-        downloadHref = "{{{ latestStudioRelease.assets.win }}}";
+        osText = 'für Windows';
+        downloadHref = '{{{ latestStudioRelease.assets.win }}}';
       } else if (window.navigator.platform.match(/mac/i)) {
-        osText = "für macOS";
-        downloadHref = "{{{ latestStudioRelease.assets.mac }}}";
+        osText = 'für macOS';
+        downloadHref = '{{{ latestStudioRelease.assets.mac }}}';
       }
-      document.getElementById("js-download-os").innerHTML = osText;
-      document.getElementById("js-download-link").setAttribute("href", downloadHref);
+      document.getElementById('js-download-os').innerHTML = osText;
+      document.getElementById('js-download-link').setAttribute('href', downloadHref);
     </script>
     <div>
-      <small
-        ><a
-          style="color: white; text-decoration: underline; opacity: 0.75"
-          href="/downloads"
-          >Weitere Downloads verfügbar</a
-        ></small
-      >
+      <small>
+        <a style="color: white; text-decoration: underline; opacity: 0.75" href="/downloads">
+          Weitere Downloads verfügbar
+        </a>
+      </small>
     </div>
   </div>
   <div class="text-center">
@@ -49,6 +48,14 @@ layout: landing-page.html
 
   <h1>Getting Started</h1>
   <div class="py-3">
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQcj2CWLtq-CXlMfDsHkcc43hQTNWYWN6e6VzwCh6eZp-TA-sjYBUrVobPBWBIFDSRyMlrR9zxJBge7/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <iframe
+      src="https://docs.google.com/presentation/d/e/2PACX-1vQcj2CWLtq-CXlMfDsHkcc43hQTNWYWN6e6VzwCh6eZp-TA-sjYBUrVobPBWBIFDSRyMlrR9zxJBge7/embed?start=false&loop=false&delayms=3000"
+      frameborder="0"
+      width="1280"
+      height="749"
+      allowfullscreen="true"
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+    ></iframe>
   </div>
 </div>
