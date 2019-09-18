@@ -17,8 +17,8 @@ layout: layout.html
     {{#each latestStudioReleasesStable}}
     <tr>
       <td>BPMN Studio {{ name }}</td>
-      <td><a href="{{ release.assets.mac }}">Download für macOS</a></td>
-      <td><a href="{{ release.assets.win }}">Download für Windows</a></td>
+      <td><a href="{{ this.assets.mac }}">Download für macOS</a></td>
+      <td><a href="{{ this.assets.win }}">Download für Windows</a></td>
     </tr>
     {{/each}}
   </tbody>
@@ -30,8 +30,8 @@ layout: layout.html
     {{#each latestStudioReleasesBeta}}
     <tr>
       <td>BPMN Studio {{ name }}</td>
-      <td><a href="{{ release.assets.mac }}">Download für macOS</a></td>
-      <td><a href="{{ release.assets.win }}">Download für Windows</a></td>
+      <td><a href="{{ this.assets.mac }}">Download für macOS</a></td>
+      <td><a href="{{ this.assets.win }}">Download für Windows</a></td>
     </tr>
     {{/each}}
   </tbody>
