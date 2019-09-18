@@ -43,7 +43,7 @@ async function fetchLatestReleases(page) {
 
 function getAmountOfStableReleases(releases) {
   return releases.filter(release => {
-    if (release.draft || release.name === null) {
+    if (release.draft || release.name == null) {
       return false;
     }
 
@@ -53,7 +53,7 @@ function getAmountOfStableReleases(releases) {
 
 function getAmountOfBetaReleases(releases) {
   return releases.filter(release => {
-    if (release.draft || release.name === null) {
+    if (release.draft || release.name == null) {
       return false;
     }
 
@@ -64,7 +64,7 @@ function getAmountOfBetaReleases(releases) {
 function loadLatestReleases() {
   const data = require(LATEST_RELEASES_FILENAME);
   const releases = data.filter(
-    x => !x.draft && x.name !== null && !x.name.includes("-pre")
+    x => !x.draft && x.name != null && !x.name.includes("-pre")
   );
 
   const releaseData = releases.map(release => {
