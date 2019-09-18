@@ -5,20 +5,26 @@ const GITHUB_REPO = "process-engine/bpmn-studio";
 const RELEASES_API_URI = `https://api.github.com/repos/${GITHUB_REPO}/releases?per_page=50`;
 
 const LATEST_RELEASES_FILENAME = "./latest_releases.json";
+const MIN_COUNT_STABLE_RELEASES = 5;
+const MIN_COUNT_BETA_RELEASES = 5;
 
 async function fetchAndWriteLatestReleases() {
   const releases = [];
-  let stableReleaseAmount = 0;
-  let betaReleaseAmount = 0;
+
+  let stableReleaseCount = 0;
+  let betaReleaseCount = 0;
 
   let pageIndex = 1;
 
-  while (betaReleaseAmount < 3 || stableReleaseAmount < 3) {
+  while (
+    stableReleaseCount < MIN_COUNT_STABLE_RELEASES ||
+    betaReleaseCount < MIN_COUNT_BETA_RELEASES
+  ) {
     const nextReleases = await fetchLatestReleases(pageIndex);
     releases.push(...nextReleases);
 
-    stableReleaseAmount = getAmountOfStableReleases(releases);
-    betaReleaseAmount = getAmountOfBetaReleases(releases);
+    stableReleaseCount = getAmountOfStableReleases(releases);
+    betaReleaseCount = getAmountOfBetaReleases(releases);
 
     pageIndex++;
   }
@@ -41,7 +47,7 @@ function getAmountOfStableReleases(releases) {
       return false;
     }
 
-    return !release.name.includes("beta") && !release.name.includes("alpha");
+    return !release.name.includes("-");
   }).length;
 }
 
@@ -51,7 +57,7 @@ function getAmountOfBetaReleases(releases) {
       return false;
     }
 
-    return release.name.includes("beta");
+    return release.name.includes("-beta.");
   }).length;
 }
 

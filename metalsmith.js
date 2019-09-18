@@ -9,6 +9,9 @@ var permalinks = require("metalsmith-permalinks");
 var collections = require("metalsmith-collections");
 var sass = require("metalsmith-sass");
 
+const SHOWN_STABLE_RELEASES = 5;
+const SHOWN_BETA_RELEASES = 5;
+
 //
 // Markdown
 //
@@ -168,12 +171,16 @@ function addGettingStartedDocs() {
 function getMetaData() {
   const releases = require("./releases");
   const latestStudioReleases = releases.loadLatestReleases();
-  const latestStudioReleasesStable = latestStudioReleases.filter(release => {
-    return release.releaseChannel === "stable";
-  });
-  const latestStudioReleasesBeta = latestStudioReleases.filter(release => {
-    return release.releaseChannel === "beta";
-  });
+  const latestStudioReleasesStable = latestStudioReleases
+    .filter(release => {
+      return release.releaseChannel === "stable";
+    })
+    .slice(0, SHOWN_STABLE_RELEASES);
+  const latestStudioReleasesBeta = latestStudioReleases
+    .filter(release => {
+      return release.releaseChannel === "beta";
+    })
+    .slice(0, SHOWN_BETA_RELEASES);
   const latestStudioRelease = latestStudioReleasesStable[0];
 
   const defaultDownloadUrl =
