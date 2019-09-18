@@ -5,3 +5,5 @@ tmp
 
 # this is automatically downloaded from the getting-started repo
 src/docs/getting-started
+
+latest_releases.json

@@ -62,8 +62,10 @@ function loadLatestReleases() {
   );
 
   const releaseData = releases.map(release => {
+    const name = release.name.replace(/^Release v/, "");
+
     return {
-      name: release.name,
+      name: name,
       releaseChannel: getReleaseChannelByName(release.name),
       assets: {
         win: findAsset(release.assets, /.exe$/),
