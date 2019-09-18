@@ -10,6 +10,7 @@
     "metalsmith-layouts": "^1.4.1",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-register-helpers": "^0.4.0",
     "metalsmith-sass": "^1.4.0",
     "metalsmith-serve": "0.0.1",
     "metalsmith-start": "^2.0.1",
