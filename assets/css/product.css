@@ -74,64 +74,6 @@ footer {
   color: #fafafa;
 }
 
-.release-lists-container {
-  margin: 0 10px;
-  overflow: scroll;
-}
-
-.release-list {
-  display: block;
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.release-list :last-child {
-  border-bottom: none;
-}
-
-.release-list-container {
-  display: inline-block;
-  margin: 10px;
-}
-
-.release-list-header {
-  display: block;
-  font-weight: bold;
-}
-
-.release-list-entry {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-.release-list-entry-download-link:visited {
-    color: #005573;
-}
-.release-list-entry-download-link:hover {
-  color: #007aa6;
-}
-
-.release-list-entry-download-link {
-    color: #007aa6;
-    text-decoration: none;
-}
-
-.release-list-entry-name {
-  display: block;
-  margin-top: 15px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.release-list-entry-channel {
-  display: block;
-}
-
-.release-list-entry-releaseDate {
-  display: block;
-}
-
 h1, h2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
