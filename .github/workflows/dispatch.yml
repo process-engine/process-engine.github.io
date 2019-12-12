@@ -1,9 +1,5 @@
 name: Repository Dispatch
 on:
-  push:
-    branches:
-      - "*"
-      - "*/*"
   repository_dispatch:
     types: [release_was_published]
 jobs:
@@ -11,5 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          ref: ${{ github.event.client_payload.ref }}
 
       - run: echo ${{ github.event.client_payload.sha }}
