@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Build Sources
-        run: npm run Build
+        run: npm run build
 
       - name: Deploy
         run: npm run deploy -- --user="ProcessEngineCI <hello@process-engine.io>" --repo=https://${GH_TOKEN}@github.com/process-engine/process-engine.github.io.git
