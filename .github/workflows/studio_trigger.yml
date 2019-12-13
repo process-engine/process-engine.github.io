@@ -1,0 +1,10 @@
+name: Deploy on Studio Release
+on:
+  repository_dispatch:
+    types: [release_was_published]
+jobs:
+  deploy_website:
+    name: "Deploy ProcessEngine.io"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
