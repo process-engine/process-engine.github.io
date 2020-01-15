@@ -69,17 +69,17 @@
       class="btn btn-primary btn-lg"
       id="js-download-link"
     >
-      BPMN Studio 5.11.0 <span id="js-download-os"></span> herunterladen
+      BPMN Studio 5.11.2 <span id="js-download-os"></span> herunterladen
     </a>
     <script>
       var osText = '';
       var downloadHref = 'https://github.com/process-engine/bpmn-studio/releases/latest';
       if (window.navigator.platform.match(/win/i)) {
         osText = 'für Windows';
-        downloadHref = 'https://github.com/process-engine/bpmn-studio/releases/download/v5.11.0/bpmn-studio-setup-5.11.0.exe';
+        downloadHref = 'https://github.com/process-engine/bpmn-studio/releases/download/v5.11.2/bpmn-studio-setup-5.11.2.exe';
       } else if (window.navigator.platform.match(/mac/i)) {
         osText = 'für macOS';
-        downloadHref = 'https://github.com/process-engine/bpmn-studio/releases/download/v5.11.0/bpmn-studio-setup-5.11.0.dmg';
+        downloadHref = 'https://github.com/process-engine/bpmn-studio/releases/download/v5.11.2/bpmn-studio-setup-5.11.2.dmg';
       }
       document.getElementById('js-download-os').innerHTML = osText;
       document.getElementById('js-download-link').setAttribute('href', downloadHref);
