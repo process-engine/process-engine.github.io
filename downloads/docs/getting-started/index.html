@@ -99,15 +99,21 @@ Regelmäßig scheinen einige der Anforderungen sich zu widersprechen, so dass Te
 <p><img src="/docs/getting-started/images/Prozess-Aktivierungs-E-Mails.png" alt="Prozess für Aktivierungs-E-Mails"></p>
 <p>Eine Workflow-Engine ermöglicht, Diagramme wie dieses direkt auszuführen und so zum einen die Abläufe mit allen im Team zu diskutieren (insbesondere den Fachexperten, die nicht zwingenderweise Techniker sind!) sowie Unterschiede zwischen der Dokumentation und dem Programmcode zu vermeiden.</p>
 <h3 id="steuerung-per-bpmn-studio">Steuerung per BPMN Studio</h3>
-<p>Zunächst müssen sie BPMN Studio herunterladen, anschließend Das Diagramm herunterladen.
-Wenn Sie das Studio starten, wird automatisch eine ProcessEngine-Instanz gestartet.</p>
+<p>Zunächst müssen sie <a href="https://www.process-engine.io/downloads">BPMN Studio</a> und das <a href="https://github.com/process-engine/getting-started/tree/develop/Prozesse">Diagramm</a> herunterladen.
+Wenn Sie das Studio starten, wird automatisch im Hintergrund eine ProcessEngine-Server-Instanz gestartet.</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-design.png" alt="BPMN Studio: Design-Modus"></p>
 <p>Zum Ausführen des Diagramms müssen wir ein Deployment auf diese interne ProcessEngine vornehmen.
 Dies geschieht durch einen Klick auf &quot;Deploy to ProcessEngine&quot; (in der Toolbar, oben rechts).</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-design-deploy.png" alt="BPMN Studio: Deployment per Klick"></p>
 <p>Anschließend kann das Diagramm per Klick auf &quot;Run&quot; ausgeführt werden (ebenfalls oben rechts in der Toolbar).</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-design-play.png" alt="BPMN Studio: Ausführen per Klick"></p>
-<p>Prozesse können mit individuellen Parametern gestartet werden.</p>
+<p>Prozesse können und müssen in gewissen Fällen mit individuellen Parametern gestartet werden. In diesem Beispiel wird erwartet, dass die Eigenschaft &quot;shoppingCardAmount&quot; vom Aufrufer vorgegeben wird. Die Eigenschaft wird an einem exklusiven Gateway ausgewertet, um das Prozessmodell auf einem bestimmten Pfad zu leiten. Diese Parameter können im JSON-Format in dem Feld angegeben werden.</p>
+<p>In diesem konkreten Beispiel wird der Parameter folgendermaßen angegeben:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;shoppingCardAmount&quot;</span>: <span class="hljs-number">100</span>
+}
+</code></pre>
+<p>Mit dem Wert von mindestens 100 EUR wird der Prozess durch den unteren Sequenzfluss fortgesetzt. Andernfalls wird der Pfad genommen, der durch den oberen Squenzfluss folgt.</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-inspect-custom-start.png" alt="BPMN Studio: Ausführen mit individuellen Startparametern"></p>
 <p>Während der Ausführung können Prozesse im sog. &quot;Live Execution Tracker&quot; analysiert werden.</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-inspect-let.png" alt="BPMN Studio: Live Execution Tracker"></p>
@@ -115,7 +121,7 @@ Dies geschieht durch einen Klick auf &quot;Deploy to ProcessEngine&quot; (in der
 <h3 id="steuerung-per-skript">Steuerung per Skript</h3>
 <h3 id="starten-von-prozessen">Starten von Prozessen</h3>
 <p>Die Steuerung des Diagramms aus einem Skript heraus ist denkbar einfach.</p>
-<p>Wie weiter oben bereits angedeutet, lassen sich Prozesse nach dem Deployment (das muss mit BPMN Studio erfolgen) mit Hilfe des <code>ProcessEngineClient</code> starten:</p>
+<p>Wie weiter oben bereits angedeutet, lassen sich Prozesse nach dem Deployment (das muss mit BPMN Studio erfolgen) mit Hilfe des <a href="https://github.com/process-engine/getting-started/tree/develop/DotNet/CreateProcessInstance"><code>ProcessEngineClient</code></a> starten:</p>
 <pre><code class="lang-csharp"><span class="hljs-comment">// C#</span>
 <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
 {
@@ -145,6 +151,11 @@ Dies geschieht durch einen Klick auf &quot;Deploy to ProcessEngine&quot; (in der
     }
 }
 </code></pre>
+<p>Der Port ist für die Instanz der ProcessEngine, die im BPMN Studio gestartet wird:</p>
+<ul>
+<li>Mit der regulären &quot;stable&quot; Version startet das Studio auf Port 56000 eine ProcessEngine-Server-Instanz in der aktuell stabilen Version.</li>
+<li>Mit der <em>Beta</em>-Version startet das Studio auf Port 56100 eine ProcessEngine-Server-Instanz in der aktuellen <em>Beta</em>-Version.</li>
+</ul>
 <h3 id="erstellen-von-external-task-workern">Erstellen von External Task Workern</h3>
 <p>Das &quot;External Task Pattern&quot; sieht vor, dass zu erledigende Arbeiten in einem vereinheitlichten Arbeitsvorrat hinterlegt werden.
 Dort können sie von &quot;External Task Workern&quot; abgeholt und bearbeitet werden.
@@ -226,7 +237,7 @@ Start-Events können manuell, bspw. durch ein Skript wie in unserem &quot;Hello 
 <h5 id="end-event">End-Event</h5>
 <p><img src="/docs/getting-started/images/bpmn-element-event-end.png" alt="BPMN-Element: End-Event"></p>
 <p>Jeder Prozess besitzt mindestens ein End-Event.
-Mit Erreichen eines End-Events ist die Prozessausführung beendet.</p>
+Mit Erreichen eines End-Events ist die Prozessausführung beendet. Es gibt noch viele andere BPMN-Elemente. Einen Gesamtüberblick über die weiteren BPMN-Elemente können Sie sich <a href="https://github.com/atlas-engine/ContributionGuidelines/blob/master/docs/getting_started/bpmn_elements.md">hier</a> verschaffen.</p>
 <h3 id="processengine-clients-in-vielen-programmiersprachen-und-eine-standardisierte-json-api">ProcessEngine: Clients in vielen Programmiersprachen und eine standardisierte JSON-API</h3>
 <p>Die ProcessEngine verfügt über eine standardisierte JSON-API zur Steuerung von Prozessen.</p>
 <p>Für die ProcessEngine-API existieren Clients in TypeScript, JavaScript, .NET C# und Python.
