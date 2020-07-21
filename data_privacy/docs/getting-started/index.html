@@ -56,15 +56,15 @@
     </nav>
 
     <div class="container"><p><h1 id="getting-started">Getting Started</h1></p>
-<p>AtlasEngine und BPMN Studio bilden eine verteilte, quelloffene Laufzeit- und Entwicklungsumgebung für BPMN-basierte Geschäftsprozesse.</p>
+<p>ProcessEngine und BPMN Studio bilden eine verteilte, quelloffene Laufzeit- und Entwicklungsumgebung für BPMN-basierte Geschäftsprozesse.</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-empty-state.png" alt="BPMN Studio: Start-Screen"></p>
-<h2 id="bpmn-studio-und-die-atlasengine">BPMN Studio und die AtlasEngine</h2>
-<p>Die AtlasEngine ist die Workflow-Engine von <a href="https://5minds.de">5Minds</a>.</p>
-<p>Im Gegensatz zu vielen anderen Lösungen in diesem Bereich ist AtlasEngine quelloffen und bietet mit BPMN Studio eine integrierte Entwicklungsumgebung zum grafischen Entwerfen <strong>und</strong> Ausführen von Prozessen.</p>
-<p>Die AtlasEngine unterstützt somit eine zielgerichtete, iterative Entwicklung und Sie können sich auf das konzentrieren, was zählt: <strong>Ihr Business und Ihre Nutzer.</strong></p>
+<h2 id="bpmn-studio-und-die-processengine">BPMN Studio und die ProcessEngine</h2>
+<p>Die ProcessEngine ist die Workflow-Engine von <a href="https://5minds.de">5Minds</a>.</p>
+<p>Im Gegensatz zu vielen anderen Lösungen in diesem Bereich ist ProcessEngine quelloffen und bietet mit BPMN Studio eine integrierte Entwicklungsumgebung zum grafischen Entwerfen <strong>und</strong> Ausführen von Prozessen.</p>
+<p>Die ProcessEngine unterstützt somit eine zielgerichtete, iterative Entwicklung und Sie können sich auf das konzentrieren, was zählt: <strong>Ihr Business und Ihre Nutzer.</strong></p>
 <p><img src="/docs/getting-started/images/bpmn-studio-design2.png" alt="BPMN Studio: Design-Modus"></p>
 <p>Mit BPMN Studio kann der Benutzer nicht nur Prozesse durchdenken, entwerfen und validieren, sondern sie auch direkt in BPMN Studio ausführen.
-BPMN Studio bringt hierzu eine integrierte AtlasEngine mit, welche automatisch gestartet wird und es jedem ermöglicht, seine Prozesse auch ohne Serverlandschaft auszuführen.</p>
+BPMN Studio bringt hierzu eine integrierte ProcessEngine mit, welche automatisch gestartet wird und es jedem ermöglicht, seine Prozesse auch ohne Serverlandschaft auszuführen.</p>
 <h2 id="das-hello-world-der-digitalen-transformation">Das &quot;Hello World&quot; der digitalen Transformation</h2>
 <p>Viele Einführungstexte zu Programmiersprachen und anderen IT-Themen enthalten ein sog. &quot;Hello World&quot;, ein bewusst einfach gehaltenes Beispiel, welches die jeweilige Technologie in ihren Grundzügen präsentiert.</p>
 <p>Das könnte für das Starten von Prozessen folgendermaßen aussehen.</p>
@@ -81,7 +81,7 @@ BPMN Studio bringt hierzu eine integrierte AtlasEngine mit, welche automatisch g
 <p>In BPMN Studio lassen sich diese Eigenschaften bearbeiten:</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-hello-world.png" alt="BPMN Studio: Design-Modus"></p>
 <p>Doch die Prozesse im eigenen Unternehmen sind natürlich mehr als ein Start-Aufruf.
-Um die AtlasEngine und ihre Vorzüge besser darstellen zu können, wollen wir daher ein Beispiel aus dem Bereich E-Commerce aufgreifen:</p>
+Um die ProcessEngine und ihre Vorzüge besser darstellen zu können, wollen wir daher ein Beispiel aus dem Bereich E-Commerce aufgreifen:</p>
 <p><strong>Der Online-Shop</strong></p>
 <p>In einem Online-Shop sollen Nutzer im Rahmen der Registrierung einen Rabattcode erhalten.
 Nutzer, die besonders viel Ware bestellen, sollen zudem einen sog. Reseller-Code erhalten, der ihnen ermöglicht besondere Mengen-Rabatte zu aktivieren.</p>
@@ -101,9 +101,9 @@ Regelmäßig scheinen einige der Anforderungen sich zu widersprechen, so dass Te
 <p>Eine Workflow-Engine ermöglicht, Diagramme wie dieses direkt auszuführen und so zum einen die Abläufe mit allen im Team zu diskutieren (insbesondere den Fachexperten, die nicht zwingenderweise Techniker sind!) sowie Unterschiede zwischen der Dokumentation und dem Programmcode zu vermeiden.</p>
 <h3 id="steuerung-per-bpmn-studio">Steuerung per BPMN Studio</h3>
 <p>Zunächst müssen sie <a href="https://www.process-engine.io/downloads">BPMN Studio</a> und das <a href="https://github.com/process-engine/getting-started/tree/develop/Prozesse">Diagramm</a> herunterladen.
-Wenn Sie das Studio starten, wird automatisch im Hintergrund eine AtlasEngine-Server-Instanz gestartet.</p>
+Wenn Sie das Studio starten, wird automatisch im Hintergrund eine ProcessEngine-Server-Instanz gestartet.</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-design2.png" alt="BPMN Studio: Design-Modus"></p>
-<p>Zum Ausführen des Diagramms müssen wir ein Deployment auf diese interne AtlasEngine vornehmen.
+<p>Zum Ausführen des Diagramms müssen wir ein Deployment auf diese interne ProcessEngine vornehmen.
 Dies geschieht durch einen Klick auf &quot;Deploy to ProcessEngine&quot; (in der Toolbar, oben rechts).</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-design-deploy.png" alt="BPMN Studio: Deployment per Klick"></p>
 <p>Anschließend kann das Diagramm per Klick auf &quot;Run&quot; ausgeführt werden (ebenfalls oben rechts in der Toolbar).</p>
@@ -118,11 +118,11 @@ Dies geschieht durch einen Klick auf &quot;Deploy to ProcessEngine&quot; (in der
 <p><img src="/docs/getting-started/images/bpmn-studio-inspect-custom-start2.png" alt="BPMN Studio: Ausführen mit individuellen Startparametern"></p>
 <p>Während der Ausführung können Prozesse im sog. &quot;Live Execution Tracker&quot; analysiert werden.</p>
 <p><img src="/docs/getting-started/images/bpmn-studio-inspect-let2.png" alt="BPMN Studio: Live Execution Tracker"></p>
-<p>Neben der Steuerung von Prozessen mit Hilfe des BPMN Studios lassen sich die gezeigten Funktionen natürlich auch durch Skripte über die AtlasEngine API automatisieren.</p>
+<p>Neben der Steuerung von Prozessen mit Hilfe des BPMN Studios lassen sich die gezeigten Funktionen natürlich auch durch Skripte über die ProcessEngine API automatisieren.</p>
 <h3 id="steuerung-per-skript">Steuerung per Skript</h3>
 <h3 id="starten-von-prozessen">Starten von Prozessen</h3>
 <p>Die Steuerung des Diagramms aus einem Skript heraus ist denkbar einfach.</p>
-<p>Wie weiter oben bereits angedeutet, lassen sich Prozesse nach dem Deployment (das muss mit BPMN Studio erfolgen) mit Hilfe des <a href="https://github.com/atlas-engine/discount-example/tree/feature/update_gettingStarted/Dotnet"><code>DotNet-Client der AtlasEngine</code></a> starten:</p>
+<p>Wie weiter oben bereits angedeutet, lassen sich Prozesse nach dem Deployment (das muss mit BPMN Studio erfolgen) mit Hilfe des <a href="https://github.com/atlas-engine/discount-example/tree/feature/update_gettingStarted/Dotnet"><code>DotNet-Client der ProcessEngine</code></a> starten:</p>
 <pre><code class="lang-csharp"><span class="hljs-comment">// C#</span>
 <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
     {
@@ -152,16 +152,16 @@ Dies geschieht durch einen Klick auf &quot;Deploy to ProcessEngine&quot; (in der
         }
     }
 </code></pre>
-<p>Der Port ist für die Instanz der AtlasEngine, die im BPMN Studio gestartet wird:</p>
+<p>Der Port ist für die Instanz der ProcessEngine, die im BPMN Studio gestartet wird:</p>
 <ul>
-<li>Mit der regulären &quot;stable&quot; Version startet das Studio auf Port 56000 eine AtlasEngine-Server-Instanz in der aktuell stabilen Version.</li>
-<li>Mit der <em>Beta</em>-Version startet das Studio auf Port 56100 eine AtlasEngine-Server-Instanz in der aktuellen <em>Beta</em>-Version.</li>
+<li>Mit der regulären &quot;stable&quot; Version startet das Studio auf Port 56000 eine ProcessEngine-Server-Instanz in der aktuell stabilen Version.</li>
+<li>Mit der <em>Beta</em>-Version startet das Studio auf Port 56100 eine ProcessEngine-Server-Instanz in der aktuellen <em>Beta</em>-Version.</li>
 </ul>
 <h3 id="erstellen-von-external-task-workern">Erstellen von External Task Workern</h3>
 <p>Das &quot;External Task Pattern&quot; sieht vor, dass zu erledigende Arbeiten in einem vereinheitlichten Arbeitsvorrat hinterlegt werden.
 Dort können sie von &quot;External Task Workern&quot; abgeholt und bearbeitet werden.
 Durch diese Entkopplung können die Worker in jeder beliebigen Programmiersprache implementiert werden.
-Der zuständige Worker hinterlegt anschließend das Arbeitsergebnis im Arbeitsvorrat, wo die AtlasEngine es abholen und mit der Prozessausführung fortführen kann.</p>
+Der zuständige Worker hinterlegt anschließend das Arbeitsergebnis im Arbeitsvorrat, wo die ProcessEngine es abholen und mit der Prozessausführung fortführen kann.</p>
 <p>Das Pattern stellt somit eine Alternative zur Anbindung von REST-Service-Endpunkten dar.</p>
 <p>Die folgende Abbildung stellt beide Konzepte gegenüber:</p>
 <p><img src="/docs/getting-started/./images/erklaerung-external-task-pattern.png" alt="Erklärung: External Task Pattern"></p>
@@ -236,35 +236,6 @@ Mit Erreichen eines End-Events ist die Prozessausführung beendet. Es gibt noch 
 <p>Die ProcessEngine verfügt über eine standardisierte JSON-API zur Steuerung von Prozessen.</p>
 <p>Für die ProcessEngine-API existieren Clients in TypeScript, JavaScript, .NET C# und Python.
 Da es sich um eine offen spezifizierte Schnittstelle handelt, können Clients in weiteren Sprachen mit geringem Aufwand erstellt werden.</p>
-<h2 id="bpmn-diagramme-vergleichen">BPMN-Diagramme vergleichen</h2>
-<p>In diesem Abschnitt beschreiben wir Ihnen, wie Sie BPMN-Diagramme miteinander vergleichen können.
-Im ersten Teil erstellen wir ein BPMN-Prozess und stellen dessen Änderungsverlauf visuell dar. Dieser Verlauf verschafft uns einen Überblick über den Fortschritt des Diagramms. Anhand der farblichen Darstellung der Änderungen, können Sie sehen, wie sich der Prozess schrittweise durch Hinzufügen von neuen Elementen entwickelt hat. 
-Im zweiten Teil vergleichen wir zwei Diagramme unabhängig ihrer Modellierung miteinander und zeigen die Unterschiede auf. Diese Unterschiede werden ebenfalls farblich dargestellt.</p>
-<h3 id="-nderungsverlauf-eines-bpmn-diagramms">Änderungsverlauf eines BPMN-Diagramms</h3>
-<h4 id="wie-k-nnen-sie-ein-neues-bpmn-diagramm-erstellen-">Wie können Sie ein neues BPMN-Diagramm erstellen?</h4>
-<p>Im Folgenden erstellen wir ein neues BPMN-Diagramm. Zum Start bietet das BPMN-Studio eine Vorlage mit einem Start- und einem End-Event in einem Prozesspool an (siehe Abbildung 1). </p>
-<p><img src="/docs/getting-started/images/bpmn-compare-create-diagram.png" alt="BPMN Studio: Diagramm erstellen"></p>
-<p>Durch das Klicken der Schaltfläche Show Diff  (unten rechts in der Anwendung) zeigt das Programm die Änderungen des Diagramms im Diff Protokoll an. Da sich bis jetzt keine Änderungen ergeben haben, liefert das Diff Protokoll noch kein Ergebnis (siehe Abbildung 2).</p>
-<p><img src="/docs/getting-started/images/bpmn-compare-change-history.png" alt="BPMN Studio: Änderungsverlauf"></p>
-<h4 id="wie-k-nnen-sie-das-neu-erstellte-diagramm-erweitern-">Wie können Sie das neu erstellte Diagramm erweitern?</h4>
-<p>Das Diagramm erweitern sie, indem sie einen neuen Task hinzufügen (siehe Abbildung 3).</p>
-<p><img src="/docs/getting-started/images/bpmn-compare-add-task.png" alt="BPMN Studio: Task hinzufügen"></p>
-<p>Sobald Sie dem Diagramm neue Elemente hinzugefügt haben, können Sie sich die Änderungen unter Show Diff als Protokoll anzeigen lassen (siehe Abbildung 4). In der Abbildung ist das Fenster in vier Bereiche unterteilt. Oben rechts ist  das Diagramm im Anfangszustand. Auf der linken Seite können Sie das Diagramm in der veränderten Version betrachten. Im Bereich unten links stellt das Diagramm die Veränderungen farblich dar. </p>
-<p>Die Farbe symbolisiert die Art der Änderung, die Sie durchgeführt haben, und wird zusätzlich unten links in der Legende angezeigt:</p>
-<ul>
-<li>Hinzugefügt (grün)</li>
-<li>Entfernt (rot)</li>
-<li>Geändert (orange)</li>
-<li>Layout geändert (lila)</li>
-</ul>
-<p>Im Bereich unten rechts wird das Protokoll ebenfalls farblich entsprechend der Legende aufgelistet.</p>
-<p><img src="/docs/getting-started/images/bpmn-compare-view-protocol.png" alt="BPMN Studio: Änderungsprotokoll"></p>
-<h3 id="vergleich-von-zwei-bpmn-diagrammen">Vergleich von zwei BPMN-Diagrammen</h3>
-<p>In Teil 2 vergleichen wir zwei unterschiedliche Diagramme miteinander. Zunächst klicken wir auf die Schaltfläche Show Diff. Ein Fenster öffnet sich zum Vergleich von zwei Diagrammen. Dann wählen wir die Datei aus, mit der wir das aktuelle Diagramm vergleichen wollen (siehe Abbildung 5).</p>
-<p><img src="/docs/getting-started/images/bpmn-compare-choose-a-diagram.png" alt="BPMN Studio: Diagramm auswählen"></p>
-<p>Auf dem oberen Bereich der Anwendung sind beide zu vergleichenden Diagramme dargestellt (siehe Abbildung 6). Unterschiede, welche im Diagramm 1 im Vergleich zu Diagramm 2 erkennbar sind, werden unten links farblich dargestellt. </p>
-<p>Pools und Lanes stellen die Verantwortlichkeiten in einem Prozess dar. Ein Pool repräsentiert etwa ein Unternehmen oder eine Organisation. Ein Lane repräsentiert dagegen verschiedene Abteilungen, Rollen oder Personen in einem Prozess und damit die Prozessteilnehmern bzw. “Participant”. In diesem Fall haben wir das Layout des “Participant” vergrößert und ist in der Farbe Lila gekennzeichnet. Darüber hinaus haben wir weitere Elemente hinzugefügt, die in der Farbe grün erkennbar sind. Die zu unterscheidenden Elemente werden unten rechts im Protokoll farblich dokumentiert.</p>
-<p><img src="/docs/getting-started/images/bpmn-compare-protocol-color.png" alt="BPMN Studio: Farblicher Änderungsverlauf"></p>
 <h2 id="philosophie">Philosophie</h2>
 <h3 id="wir-entwickeln-software-miteinander-">Wir entwickeln Software miteinander!</h3>
 <p>ProcessEngine ermöglicht die Anbindung von Microservices, nachrichtenbasierten Systemen und die leichte Verkettung von Komponenten.
